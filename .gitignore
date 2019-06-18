@@ -1,0 +1,9 @@
+## directory
+node_modules
+lib
+
+## log file
+npm-debug.log
+
+## packed file
+*.tgz

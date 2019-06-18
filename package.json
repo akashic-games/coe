@@ -1,0 +1,37 @@
+{
+  "name": "@akashic-extension/coe",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A co-experience library for Akashic Engine",
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "publish:patch": "lerna publish patch --yes",
+    "publish:minor": "lerna publish minor --yes",
+    "publish:major": "lerna publish major --yes",
+    "test": "lerna run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akashic-games/coe.git"
+  },
+  "author": "DWANGO Co., Ltd.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akashic-games/coe/issues"
+  },
+  "homepage": "https://github.com/akashic-games/coe#readme",
+  "devDependencies": {
+    "lerna": "^3.13.4",
+    "lerna-changelog": "^0.8.2"
+  },
+  "changelog": {
+    "repo": "akashic-games/coe",
+    "labels": {
+      "breaking": "Breaking Change",
+      "enhancement": "Enhancement",
+      "bug": "Bug Fix",
+      "documentation": "Documentation",
+      "other": "Other Change"
+    }
+  }
+}
