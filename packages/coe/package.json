@@ -41,9 +41,9 @@
     "typescript": "~3.4.5"
   },
   "dependencies": {
-    "@akashic/akashic-engine": "~2.4.14",
     "@akashic-environment/coe-plugin": "~2.0.0",
-    "@akashic-extension/coe-messages": "~1.0.0"
+    "@akashic-extension/coe-messages": "1.0.0",
+    "@akashic/akashic-engine": "~2.4.14"
   },
   "jest": {
     "moduleFileExtensions": [
