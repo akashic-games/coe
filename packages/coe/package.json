@@ -8,6 +8,7 @@
     "prepublish": "npm run build",
     "build": "rimraf ./lib && tsc -p ./tsconfig.json && npm run formatter",
     "formatter": "prettier --write \"src/**/*.ts\" --config ../prettier.config.js",
+    "doc": "typedoc --out ./doc --mode file",
     "test": "npm run run:jest && npm run lint",
     "run:jest": "jest",
     "lint": "tslint -c ../tslint.json -p tsconfig.json -e \"**/node_modules/**\""
@@ -22,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akashic-games/coe.git"
+    "url": "https://github.com/akashic-games/coe.git"
   },
   "author": "DWANGO Co., Ltd.",
   "license": "MIT",
@@ -38,6 +39,7 @@
     "rimraf": "^2.6.3",
     "ts-jest": "^24.0.2",
     "tslint": "~5.16.0",
+    "typedoc": "^0.14.2",
     "typescript": "~3.4.5"
   },
   "dependencies": {
