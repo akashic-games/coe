@@ -130,7 +130,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 		if (messages) {
 			const events = messages.map(data => new g.MessageEvent(data));
 			const timestamp = new g.TimestampEvent(Math.floor(g.game.getCurrentTime()), null as any);
-			this.game.raiseTick([timestamp, ...events] as any);
+			this.game.raiseTick([timestamp, ...events]);
 		}
 	}
 
