@@ -182,7 +182,7 @@ export class EnqueteScene extends Scene<EnqueteCommand, EnqueteActionData> {
 ただし以下の2点にご注意ください。
 
 * `coe.Scene` のコンストラクタで Controller のインスタンスを渡す必要があります。
-* `coe.Scene` は **手動進行** および **ローカルティック補間モード** として生成され、これは変更できません。
+* `coe.Scene` は初期状態で **手動進行** および **ローカルティック補間モード** として生成されます。
 詳細は [開発者向け文書](https://github.com/akashic-games/coe/blob/master/developers.md) または Akashic Engine の文書を参照してください。
 
 以上で Controller から送信された Command を各クライアント側での View に描画 することができます。
