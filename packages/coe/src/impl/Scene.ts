@@ -31,8 +31,8 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 
 	constructor(params: SceneParameters<Command, ActionData>) {
 		super({
-			local: params.local != null ? params.local : g.LocalTickMode.InterpolateLocal,
-			tickGenerationMode: params.tickGenerationMode != null ? params.tickGenerationMode : g.TickGenerationMode.Manual,
+			local: g.LocalTickMode.InterpolateLocal,
+			tickGenerationMode: g.TickGenerationMode.Manual,
 			...params
 		});
 
@@ -78,6 +78,18 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 	private onEventFiltered(pevs: any[][]): any[][] {
 		const filtered: any[][] = [];
 
+		if (!this._generateTickManually) {
+			if (!this._sentInitialEvents) {
+				// NOTE: 手動進行->自動進行切替時に自動進行の開始時刻が不明となってしまうため、シーンの切替時に timestamp を挿入する
+				filtered.push([0x2, null, null, Math.floor(g.game.getCurrentTime())]);
+				this._sentInitialEvents = true;
+			}
+			const messages = this._controller.getBroadcastDataBuffer();
+			if (messages) {
+				filtered.push(...messages.map(event => [0x20, null, null, event]));
+			}
+		}
+
 		for (let i = 0; i < pevs.length; i++) {
 			const pev = pevs[i];
 
@@ -107,18 +119,6 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 				filtered.push(pev);
 			} else {
 				filtered.push(pev);
-			}
-		}
-
-		if (!this._generateTickManually) {
-			const messages = this._controller.getBroadcastDataBuffer();
-			if (messages) {
-				filtered.push(...messages.map(event => [0x20, null, null, event]));
-			}
-			if (!this._sentInitialEvents) {
-				// NOTE: 手動進行->自動進行切替時に自動進行の開始時刻が不明となってしまうため、シーンの切替時に timestamp を挿入する
-				filtered.unshift([0x2, null, null, Math.floor(g.game.getCurrentTime())]);
-				this._sentInitialEvents = true;
 			}
 		}
 

@@ -45,7 +45,7 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 		this.actionReceived = null!;
 	}
 
-	getBroadcastDataBuffer(): any[][] | null {
+	getBroadcastDataBuffer(): any[] | null {
 		if (this.broadcastDataBuffer.length) {
 			return this.broadcastDataBuffer.splice(0);
 		}
