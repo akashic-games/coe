@@ -17,7 +17,7 @@ export interface SceneParameters<Command, ActionData> extends g.SceneParameterOb
  */
 export class Scene<Command, ActionData> extends g.Scene implements View<Command, ActionData> {
 	commandReceived: g.Trigger<Command> = new g.Trigger();
-	private _generateTickManually: boolean = false;
+	private _generatesTickManually: boolean = false;
 	private _sentInitialEvents: boolean = false;
 
 	/**
@@ -36,7 +36,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 			...params
 		});
 
-		this._generateTickManually = this.tickGenerationMode === g.TickGenerationMode.Manual;
+		this._generatesTickManually = this.tickGenerationMode === g.TickGenerationMode.Manual;
 		this._controller = params.controller;
 		this.onEventFiltered_bound = this.onEventFiltered.bind(this);
 		this.message.add(this.onReceivedMessageEvent, this);
@@ -45,7 +45,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 		// TODO: 他の判定方法を検討
 		if (getPermission().advance) {
 			this.update.add(this.fireControllerUpdate, this);
-			if (this._generateTickManually) {
+			if (this._generatesTickManually) {
 				this.update.add(this.raiseTickIfMessageEventExists, this);
 			}
 			this.loaded.addOnce(() => {
@@ -78,7 +78,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 	private onEventFiltered(pevs: any[][]): any[][] {
 		const filtered: any[][] = [];
 
-		if (!this._generateTickManually) {
+		if (!this._generatesTickManually) {
 			if (!this._sentInitialEvents) {
 				// NOTE: 手動進行->自動進行切替時に自動進行の開始時刻が不明となってしまうため、シーンの切替時に timestamp を挿入する
 				filtered.push([0x2, null, null, Math.floor(g.game.getCurrentTime())]);
