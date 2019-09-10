@@ -31,8 +31,8 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 
 	constructor(params: SceneParameters<Command, ActionData>) {
 		super({
-			local: params.local != null ? params.local : g.LocalTickMode.InterpolateLocal,
-			tickGenerationMode: params.tickGenerationMode != null ? params.tickGenerationMode : g.TickGenerationMode.Manual,
+			local: g.LocalTickMode.InterpolateLocal,
+			tickGenerationMode: g.TickGenerationMode.Manual,
 			...params
 		});
 
