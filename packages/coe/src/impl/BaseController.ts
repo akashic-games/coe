@@ -7,18 +7,14 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 	actionReceived: g.Trigger<Action<ActionData>> = new g.Trigger();
 
 	private timerManager: g.TimerManager;
-	private tickBuffer: any[][] = [];
+	private broadcastDataBuffer: any[] = [];
 
 	constructor() {
 		this.timerManager = new g.TimerManager(this.update, g.game.fps);
-		this.update.add(this.onUpdate, this);
 	}
 
 	broadcast(data: Command): void {
-		// NOTE: g.game.getCurrentTime() は小数点以下を含むので整数値化する。
-		const timestamp = new g.TimestampEvent(Math.floor(g.game.getCurrentTime()), null as any);
-		const event = new g.MessageEvent(data);
-		this.tickBuffer.push([timestamp, event]);
+		this.broadcastDataBuffer.push(data);
 	}
 
 	setTimeout(func: () => void, duration: number, owner?: any): g.TimerIdentifier {
@@ -43,15 +39,16 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 		this.actionReceived.destroy();
 
 		this.timerManager = null!;
-		this.tickBuffer = null!;
+		this.broadcastDataBuffer = null!;
 		this.update = null!;
 		this.loaded = null!;
 		this.actionReceived = null!;
 	}
 
-	private onUpdate(): void {
-		if (this.tickBuffer.length) {
-			g.game.raiseTick(this.tickBuffer.shift());
+	getBroadcastDataBuffer(): any[] | null {
+		if (this.broadcastDataBuffer.length) {
+			return this.broadcastDataBuffer.splice(0);
 		}
+		return null;
 	}
 }
