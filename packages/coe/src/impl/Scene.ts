@@ -1,4 +1,4 @@
-import { addJoinedPlayer, getPermission, removeJoinedPlayer } from "../global";
+import { addJoinedPlayer, removeJoinedPlayer } from "../global";
 import { View } from "../View";
 import { BaseController } from "./BaseController";
 
@@ -42,8 +42,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 		this.message.add(this.onReceivedMessageEvent, this);
 		this.stateChanged.add(this.onStateChanged, this);
 
-		// TODO: 他の判定方法を検討
-		if (getPermission().advance) {
+		if (g.game.isActiveInstance()) {
 			this.update.add(this.fireControllerUpdate, this);
 			if (this._generatesTickManually) {
 				this.update.add(this.raiseTickIfMessageEventExists, this);

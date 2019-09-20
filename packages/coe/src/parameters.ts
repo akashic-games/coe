@@ -13,11 +13,7 @@ import { SceneWatcher } from "./SceneWatcher";
  */
 export interface InitializeArguments {
 	coe: {
-		permission: {
-			advance: boolean;
-			aggregation: boolean;
-			advanceRequest: boolean;
-		};
+		permission: Permission;
 		roles: string[];
 		debugMode?: boolean;
 	};
@@ -46,7 +42,7 @@ export interface InitializeParameters {
 
 /**
  * インスタンスの権利を表すインターフェース。
- * このインタフェースは後方互換性のために存在している。
+ * @deprecated このインタフェースは後方互換性のために存在している。
  */
 export interface Permission {
 	/**

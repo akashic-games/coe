@@ -54,8 +54,7 @@ export function initialize(params: InitializeParameters): void {
 			debugMode = !!args.coe.debugMode;
 		}
 	} else {
-		// NOTE: 現実装上 shouldSaveSnapshot === true であれば、それはアクティブインスタンスとみなせる。
-		if (g.game.shouldSaveSnapshot()) {
+		if (g.game.isActiveInstance()) {
 			permission.advance = true;
 			permission.aggregation = true;
 			permission.advanceRequest = true;

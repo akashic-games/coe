@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES5",
     "lib": ["es5"],
-    "types": ["node"],
+    "types": ["node", "jest"],
     "noImplicitAny": true,
     "module": "commonjs" ,
     "noUnusedLocals": true,
