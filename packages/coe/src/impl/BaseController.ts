@@ -3,7 +3,7 @@ import { Action } from "../parameters";
 
 export class BaseController<Command, ActionData> implements Controller<Command, ActionData> {
 	/**
-	 * 本 Controller と紐づくScene のアセット情報。
+	 * 本 Controller と紐づく Scene のアセット情報。
 	 * `this.loaded` の発火以降しか取得できない点に注意。
 	 */
 	assets: { [assetId: string]: g.Asset } = {};
