@@ -48,6 +48,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 				this.update.add(this.raiseTickIfMessageEventExists, this);
 			}
 			this.loaded.addOnce(() => {
+				this._controller.assets = this.assets;
 				this._controller.loaded.fire();
 			});
 		}

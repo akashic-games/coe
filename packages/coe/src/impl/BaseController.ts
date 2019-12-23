@@ -2,6 +2,11 @@ import { Controller } from "../Controller";
 import { Action } from "../parameters";
 
 export class BaseController<Command, ActionData> implements Controller<Command, ActionData> {
+	/**
+	 * 本 Controller と紐づく Scene のアセット情報。
+	 * `this.loaded` の発火以降しか取得できない点に注意。
+	 */
+	assets: { [assetId: string]: g.Asset } = {};
 	loaded: g.Trigger<void> = new g.Trigger();
 	update: g.Trigger<void> = new g.Trigger();
 	actionReceived: g.Trigger<Action<ActionData>> = new g.Trigger();
@@ -38,6 +43,7 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 		this.loaded.destroy();
 		this.actionReceived.destroy();
 
+		this.assets = null!;
 		this.timerManager = null!;
 		this.broadcastDataBuffer = null!;
 		this.update = null!;

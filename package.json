@@ -8,6 +8,7 @@
     "publish:patch": "lerna publish patch --yes",
     "publish:minor": "lerna publish minor --yes",
     "publish:major": "lerna publish major --yes",
+    "changelog": "echo \"# CHANGELOG\" > CHANGELOG.md && lerna-changelog --from=@akashic-extension/coe@1.0.0 >> CHANGELOG.md",
     "test": "lerna run test"
   },
   "repository": {
@@ -21,8 +22,8 @@
   },
   "homepage": "https://github.com/akashic-games/coe#readme",
   "devDependencies": {
-    "lerna": "^3.13.4",
-    "lerna-changelog": "^0.8.2"
+    "lerna": "^3.19.0",
+    "lerna-changelog": "^1.0.0"
   },
   "changelog": {
     "repo": "akashic-games/coe",
