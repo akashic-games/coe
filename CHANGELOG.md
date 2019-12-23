@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## @akashic-extension/coe@1.1.2 (2019-12-23)
+
+#### Enhancement
+* `coe`
+  * [#6](https://github.com/akashic-games/coe/pull/6) Support BaseController#assets, add CHANGELOG.md ([@yu-ogi](https://github.com/yu-ogi))
+
+#### Documentation
+* `coe`
+  * [#6](https://github.com/akashic-games/coe/pull/6) Support BaseController#assets, add CHANGELOG.md ([@yu-ogi](https://github.com/yu-ogi))
+
+#### Committers: 1
+- [@yu-ogi](https://github.com/yu-ogi)
+
+
 ## @akashic-extension/coe@1.1.1 (2019-09-25)
 
 #### Breaking Change
