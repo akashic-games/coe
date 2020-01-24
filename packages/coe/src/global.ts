@@ -41,6 +41,7 @@ export function getSessionId(): SessionId {
  */
 export function initialize(params: InitializeParameters): void {
 	const args: InitializeArguments | undefined = params.args && params.args.args ? params.args.args : undefined;
+	const game = params.game;
 	if (args && args.coe) {
 		if (args.coe.permission) {
 			permission.advance = !!args.coe.permission.advance;
@@ -54,25 +55,32 @@ export function initialize(params: InitializeParameters): void {
 			debugMode = !!args.coe.debugMode;
 		}
 	} else {
-		if (g.game.isActiveInstance()) {
+		if (game.isActiveInstance()) {
 			permission.advance = true;
 			permission.aggregation = true;
 			permission.advanceRequest = true;
 			roles = ["broadcaster"];
 		} else {
-			permission.advance = params.game.selfId == null;
-			permission.aggregation = params.game.selfId == null;
-			permission.advanceRequest = params.game.selfId == null;
+			permission.advance = game.selfId == null;
+			permission.aggregation = game.selfId == null;
+			permission.advanceRequest = game.selfId == null;
 		}
 	}
 
 	if (params.coeMessageEventHandler) {
-		params.coeMessageEventHandler.initialize(params.game);
+		params.coeMessageEventHandler.initialize(game);
 	} else {
 		// TODO: 相互参照の解消
 		const messageEventHandler = new COEMessageEventHandler();
-		messageEventHandler.initialize(params.game);
+		messageEventHandler.initialize(game);
 	}
+
+	game.join.add(e => {
+		if (e.player.id != null) addJoinedPlayer(e.player.id);
+	});
+	game.leave.add(e => {
+		if (e.player.id != null) removeJoinedPlayer(e.player.id);
+	});
 }
 
 /**
