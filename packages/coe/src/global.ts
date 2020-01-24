@@ -75,11 +75,11 @@ export function initialize(params: InitializeParameters): void {
 		messageEventHandler.initialize(game);
 	}
 
-	game.join.add(p => {
-		if (p.player.id != null) addJoinedPlayer(p.player.id);
+	game.join.add(e => {
+		if (e.player.id != null) addJoinedPlayer(e.player.id);
 	});
-	game.leave.add(p => {
-		if (p.player.id != null) removeJoinedPlayer(p.player.id);
+	game.leave.add(e => {
+		if (e.player.id != null) removeJoinedPlayer(e.player.id);
 	});
 }
 
