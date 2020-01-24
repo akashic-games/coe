@@ -1,4 +1,3 @@
-import { addJoinedPlayer, removeJoinedPlayer } from "../global";
 import { View } from "../View";
 import { BaseController } from "./BaseController";
 
@@ -105,18 +104,6 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 					},
 					data: pev[3]
 				});
-			} else if (type === 0x00) {
-				// g.JoinEvent
-				if (playerId != null) {
-					addJoinedPlayer(playerId);
-				}
-				filtered.push(pev);
-			} else if (type === 0x01) {
-				// g.LeaveEvent
-				if (playerId != null) {
-					removeJoinedPlayer(playerId);
-				}
-				filtered.push(pev);
 			} else {
 				filtered.push(pev);
 			}
