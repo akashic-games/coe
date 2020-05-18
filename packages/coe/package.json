@@ -8,7 +8,7 @@
     "prepare": "npm run build",
     "build": "rimraf ./lib && tsc -p ./tsconfig.json && npm run format",
     "format": "prettier --write \"src/**/*.ts\" --config ../prettier.config.js",
-    "doc": "typedoc --out ./doc --mode file",
+    "doc": "typedoc --out ./doc --mode file --gaID UA-162208211-1",
     "test": "npm run run:jest && npm run lint",
     "run:jest": "jest",
     "lint": "tslint -c ../tslint.json -p tsconfig.json -e \"**/node_modules/**\""
