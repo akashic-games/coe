@@ -41,7 +41,7 @@
     "ts-jest": "^24.1.0",
     "tslint": "~5.20.0",
     "typedoc": "^0.15.0",
-    "typescript": "~3.6.3"
+    "typescript": "~3.9.2"
   },
   "dependencies": {
     "@akashic-environment/coe-plugin": "~2.0.0",
