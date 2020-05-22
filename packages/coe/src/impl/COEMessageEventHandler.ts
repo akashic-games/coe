@@ -22,7 +22,8 @@ export class COEMessageEventHandler extends SceneWatcher {
 		scene.message.add(this.handleMessageEvent, this);
 	}
 
-	protected handleMessageEvent(event: g.MessageEvent): void {
+	protected handleMessageEvent(event?: g.MessageEvent): void {
+		if (!event) return;
 		const message = event.data as COEMessage;
 		if (message.type === "child_start") {
 			startSession({
