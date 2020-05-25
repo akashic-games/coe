@@ -11,16 +11,16 @@ export abstract class SceneWatcher {
 	 */
 	initialize(game: g.Game): void {
 		this.game = game;
-		this.game._sceneChanged.add(this.handleScene, this);
+		this.game.onSceneChange.add(this.handleScene, this);
 	}
 
 	/**
 	 * 本インスタンスを破棄する。
 	 */
 	destroy(): void {
-		this.game!._sceneChanged.remove(this.handleScene, this);
+		this.game!.onSceneChange.remove(this.handleScene, this);
 		this.game = null;
 	}
 
-	protected abstract handleScene(scene: g.Scene): void;
+	protected abstract handleScene(scene?: g.Scene): void;
 }

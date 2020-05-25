@@ -46,8 +46,8 @@ export class COEController<Command, ActionData> extends BaseController<Command, 
 		super.destroy();
 	}
 
-	private onCOEMessageEventReceived(action: Action<any>) {
-		if (isTrustedAction(action) && action.data) {
+	private onCOEMessageEventReceived(action?: Action<any>) {
+		if (action && action.data && isTrustedAction(action)) {
 			if (action.data.type === "start") {
 				this.startSessionRequested.fire(action.data);
 			} else if (action.data.type === "child_start" || action.data.type === "child_end") {
