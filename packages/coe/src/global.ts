@@ -75,8 +75,8 @@ export function initialize(params: InitializeParameters): void {
 		messageEventHandler.initialize(game);
 	}
 
-	game.join.add(handleJoinEvent);
-	game.leave.add(handleLeaveEvent);
+	game.onJoin.add(handleJoinEvent);
+	game.onLeave.add(handleLeaveEvent);
 }
 
 function handleJoinEvent(e?: g.JoinEvent): void {
