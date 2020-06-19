@@ -1,6 +1,11 @@
 import { Controller } from "../Controller";
 import { Action } from "../parameters";
 
+interface BroadcastDataBuffer<T> {
+	data: T;
+	priority: number;
+}
+
 export class BaseController<Command, ActionData> implements Controller<Command, ActionData> {
 	/**
 	 * 本 Controller と紐づく Scene のアセット情報。
@@ -12,14 +17,19 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 	actionReceived: g.Trigger<Action<ActionData>> = new g.Trigger();
 
 	private timerManager: g.TimerManager;
-	private broadcastDataBuffer: any[] = [];
+	private broadcastDataBuffer: BroadcastDataBuffer<any>[] = [];
 
 	constructor() {
 		this.timerManager = new g.TimerManager(this.update, g.game.fps);
 	}
 
-	broadcast(data: Command): void {
-		this.broadcastDataBuffer.push(data);
+	/**
+	 * View に対してデータをブロードキャストする。
+	 * @param data プロードキャストするデータ
+	 * @param priority プライオリティ。省略時は 0
+	 */
+	broadcast(data: Command, priority: number = 0): void {
+		this.broadcastDataBuffer.push({ data, priority });
 	}
 
 	setTimeout(func: () => void, duration: number, owner?: any): g.TimerIdentifier {
@@ -51,7 +61,7 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 		this.actionReceived = null!;
 	}
 
-	getBroadcastDataBuffer(): any[] | null {
+	getBroadcastDataBuffer(): BroadcastDataBuffer<any>[] | null {
 		if (this.broadcastDataBuffer.length) {
 			return this.broadcastDataBuffer.splice(0);
 		}

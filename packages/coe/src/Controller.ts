@@ -20,6 +20,7 @@ export interface Controller<Command, ActionData> {
 	/**
 	 * View に対してデータをブロードキャストする。
 	 * @param data プロードキャストするデータ
+	 * @param priority プライオリティ
 	 */
-	broadcast(data: Command): void;
+	broadcast(data: Command, priority?: number): void;
 }
