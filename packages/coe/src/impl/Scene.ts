@@ -85,7 +85,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 			}
 			const buffer = this._controller.getBroadcastDataBuffer();
 			if (buffer) {
-				filtered.push(...buffer.map(({ data, priority }) => [0x20, null, data, priority]));
+				filtered.push(...buffer.map(({ data, priority }) => [0x20, priority, null, data]));
 			}
 		}
 
