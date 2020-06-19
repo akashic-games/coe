@@ -84,10 +84,10 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 				filtered.push([0x2, null!, null, Math.floor(g.game.getCurrentTime())]);
 				this._sentInitialEvents = true;
 			}
-			const messages = this._controller.getBroadcastDataBuffer();
-			if (messages) {
+			const buffer = this._controller.getBroadcastDataBuffer();
+			if (buffer) {
 				filtered.push(
-					...messages.map<pl.Event>(event => [0x20, null!, null, event])
+					...buffer.map<pl.Event>(({ data, priority }) => [0x20, priority, null, data])
 				);
 			}
 		}
@@ -116,9 +116,9 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 	}
 
 	private raiseTickIfMessageEventExists(): void {
-		const messages = this._controller.getBroadcastDataBuffer();
-		if (!messages) return;
-		const events = messages.map(data => new g.MessageEvent(data));
+		const buffer = this._controller.getBroadcastDataBuffer();
+		if (!buffer) return;
+		const events = buffer.map(({ data, priority }) => new g.MessageEvent(data, undefined, undefined, priority));
 		const timestamp = new g.TimestampEvent(Math.floor(g.game.getCurrentTime()), null as any);
 		this.game.raiseTick([timestamp, ...events]);
 	}
