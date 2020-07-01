@@ -1,6 +1,6 @@
 {
   "name": "@akashic-extension/coe-messages",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A core definitions for COE",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
@@ -44,7 +44,7 @@
     "typescript": "~3.8.3"
   },
   "dependencies": {
-    "@akashic/playlog": "~2.0.0"
+    "@akashic/playlog": "~3.0.0"
   },
   "jest": {
     "moduleFileExtensions": [
