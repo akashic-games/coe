@@ -31,6 +31,7 @@ export function getPermission(): Permission {
  * 自身のセッションIDを取得する。
  */
 export function getSessionId(): SessionId {
+	// @ts-ignore
 	return g.game.playId;
 }
 
