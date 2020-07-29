@@ -1,0 +1,15 @@
+version: 1
+rules:
+  # akashic- 以外は大文字の"Akashic"
+  # 全体・総称としてのアカシックシステムは Akashic とする
+  - expected: Akashic$1
+    patterns:
+      - /akashic([^\-])/
+  - expected: インターフェース
+    patterns:
+      - インタフェース
+      - インターフェイス
+      - I/F
+  - expected: のような
+    patterns:
+      - の様な
