@@ -18,8 +18,8 @@ type COEMessage = COEChildSessionStartMessage | COEExtendChildSessionEndMessage 
 export class COEMessageEventHandler extends SceneWatcher {
 	protected handleScene(scene: g.Scene): void {
 		// 重複の防止および trigger の最後尾に handler を追加する
-		scene.message.remove(this.handleMessageEvent, this);
-		scene.message.add(this.handleMessageEvent, this);
+		scene.onMessage.remove(this.handleMessageEvent, this);
+		scene.onMessage.add(this.handleMessageEvent, this);
 	}
 
 	protected handleMessageEvent(event?: g.MessageEvent): void {
