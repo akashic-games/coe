@@ -15,7 +15,10 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 	/**
 	 * 本 controller によるイベントの消化を一時的にロックするかどうか。
 	 */
-	lockConsumingMessageEvent: boolean = false;
+	processingMessageEvent: boolean = false;
+	/**
+	 * 本 controller によるイベントの消化を一時的にロックするかどうか。
+	 */
 	loaded: g.Trigger<void> = new g.Trigger();
 	update: g.Trigger<void> = new g.Trigger();
 	actionReceived: g.Trigger<Action<ActionData>> = new g.Trigger();
