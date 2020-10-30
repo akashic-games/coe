@@ -100,7 +100,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 
 			if (type === 0x20 && playerId != null) {
 				// g.MessageEvent
-				if (this._controller.processingMessageEvent) {
+				if (this._controller.lockingProcessingMessageEvent) {
 					processNext(pev);
 					continue;
 				}

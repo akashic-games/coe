@@ -13,11 +13,11 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 	 */
 	assets: { [assetId: string]: g.Asset } = {};
 	/**
-	 * 本 controller による g.MessageEvent の消化を一時的にロックするかどうか。
+	 * 本 controller による g.MessageEvent の処理を一時的にロックするかどうか。
 	 *
 	 * 通常、ゲーム開発者は本値を参照・また書き換えてはならない。
 	 */
-	processingMessageEvent: boolean = false;
+	lockingProcessingMessageEvent: boolean = false;
 	/**
 	 * 本 controller によるイベントの消化を一時的にロックするかどうか。
 	 */
