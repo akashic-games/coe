@@ -94,16 +94,16 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 
 		for (let i = 0; i < pevs.length; i++) {
 			const pev = pevs[i];
-
 			const type = pev[0];
 			const playerId = pev[2];
 
+			if (this._controller.lockingProcessingMessageEvent) {
+				processNext(pev);
+				continue;
+			}
+
 			if (type === 0x20 && playerId != null) {
 				// g.MessageEvent
-				if (this._controller.lockingProcessingMessageEvent) {
-					processNext(pev);
-					continue;
-				}
 				// 信頼されているメッセージ (playerId === TrustedPlayerId) かどうかは、各アプリケーション実装者が判断する。
 				this._controller.actionReceived.fire({
 					player: {
