@@ -50,6 +50,10 @@ export class COEController<Command, ActionData> extends BaseController<Command, 
 		if (action && action.data && isTrustedAction(action)) {
 			if (action.data.type === "start") {
 				this.startSessionRequested.fire(action.data);
+				this.lockingProcessingMessageEvent = true;
+				this.update.addOnce(() => {
+					this.lockingProcessingMessageEvent = false;
+				});
 			} else if (action.data.type === "child_start" || action.data.type === "child_end") {
 				this.broadcast(action.data);
 			} else if (action.data.type === "end") {

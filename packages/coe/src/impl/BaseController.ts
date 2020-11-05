@@ -12,6 +12,15 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 	 * `this.loaded` の発火以降しか取得できない点に注意。
 	 */
 	assets: { [assetId: string]: g.Asset } = {};
+	/**
+	 * 本 controller による g.MessageEvent の処理を一時的にロックするかどうか。
+	 *
+	 * 通常、ゲーム開発者は本値を参照・また書き換えてはならない。
+	 */
+	lockingProcessingMessageEvent: boolean = false;
+	/**
+	 * 本 controller によるイベントの消化を一時的にロックするかどうか。
+	 */
 	loaded: g.Trigger<void> = new g.Trigger();
 	update: g.Trigger<void> = new g.Trigger();
 	actionReceived: g.Trigger<Action<ActionData>> = new g.Trigger();

@@ -27,7 +27,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 	 * `this.send()` のみで Controller と通信を行うべきである。
 	 */
 	protected _controller: BaseController<Command, ActionData>;
-	private onEventFiltered_bound: (pevs: pl.Event[]) => pl.Event[];
+	private onEventFiltered_bound: g.EventFilter;
 
 	constructor(params: SceneParameters<Command, ActionData>) {
 		super({
@@ -39,15 +39,15 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 		this._generatesTickManually = this.tickGenerationMode === "manual";
 		this._controller = params.controller;
 		this.onEventFiltered_bound = this.onEventFiltered.bind(this);
-		this.message.add(this.onReceivedMessageEvent, this);
+		this.onMessage.add(this.onReceivedMessageEvent, this);
 		this.onStateChange.add(this.onStateChanged, this);
 
 		if (g.game.isActiveInstance()) {
-			this.update.add(this.fireControllerUpdate, this);
+			this.onUpdate.add(this.fireControllerUpdate, this);
 			if (this._generatesTickManually) {
-				this.update.add(this.raiseTickIfMessageEventExists, this);
+				this.onUpdate.add(this.raiseTickIfMessageEventExists, this);
 			}
-			this.loaded.addOnce(() => {
+			this.onLoad.addOnce(() => {
 				this._controller.assets = this.assets;
 				this._controller.loaded.fire();
 			});
@@ -62,7 +62,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 	destroy() {
 		this.commandReceived.destroy();
 		this.game.removeEventFilter(this.onEventFiltered_bound);
-		this.message.remove(this.onReceivedMessageEvent, this);
+		this.onMessage.remove(this.onReceivedMessageEvent, this);
 
 		this.commandReceived = null!;
 		this._controller = null!;
@@ -75,7 +75,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 		this._controller.update.fire();
 	}
 
-	private onEventFiltered(pevs: pl.Event[]): pl.Event[] {
+	private onEventFiltered(pevs: pl.Event[], { processNext }: g.EventFilterController): pl.Event[] {
 		const filtered: pl.Event[] = [];
 
 		if (!this._generatesTickManually) {
@@ -94,9 +94,13 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 
 		for (let i = 0; i < pevs.length; i++) {
 			const pev = pevs[i];
-
 			const type = pev[0];
 			const playerId = pev[2];
+
+			if (this._controller.lockingProcessingMessageEvent) {
+				processNext(pev);
+				continue;
+			}
 
 			if (type === 0x20 && playerId != null) {
 				// g.MessageEvent
