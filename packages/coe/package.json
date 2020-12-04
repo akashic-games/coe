@@ -19,7 +19,8 @@
   ],
   "publishConfig": {
     "access": "public",
-    "@akashic-extension:registry": "https://registry.npmjs.org/"
+    "@akashic-extension:registry": "https://registry.npmjs.org/",
+    "tag": "for_ae2x"
   },
   "repository": {
     "type": "git",
