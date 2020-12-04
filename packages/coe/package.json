@@ -19,7 +19,6 @@
   ],
   "publishConfig": {
     "access": "public",
-    "tag": "next",
     "@akashic-extension:registry": "https://registry.npmjs.org/"
   },
   "repository": {
