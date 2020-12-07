@@ -5,9 +5,9 @@
   "description": "A co-experience library for Akashic Engine",
   "scripts": {
     "postinstall": "lerna bootstrap",
-    "publish:patch": "lerna publish patch --dist-tag ${PUBLISH_DIST_TAG:-latest} --yes",
-    "publish:minor": "lerna publish minor --dist-tag ${PUBLISH_DIST_TAG:-latest} --yes",
-    "publish:major": "lerna publish major --dist-tag ${PUBLISH_DIST_TAG:-latest} --yes",
+    "publish:patch": "lerna publish patch --yes",
+    "publish:minor": "lerna publish minor --yes",
+    "publish:major": "lerna publish major --yes",
     "changelog": "echo \"# CHANGELOG\" > CHANGELOG.md && lerna-changelog --from=@akashic-extension/coe@1.0.0 >> CHANGELOG.md",
     "test": "lerna run test"
   },
@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/akashic-games/coe#readme",
   "devDependencies": {
-    "lerna": "^3.19.0",
-    "lerna-changelog": "^1.0.0"
+    "lerna": "^3.22.1",
+    "lerna-changelog": "^1.0.1"
   },
   "changelog": {
     "repo": "akashic-games/coe",

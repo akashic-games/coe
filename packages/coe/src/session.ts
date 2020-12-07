@@ -1,14 +1,7 @@
 import { COEExitSessionParameters, COEPlugin, COEStartSessionParameters } from "@akashic-environment/coe-plugin";
 import { COEExternalMessage, SessionId } from "@akashic-extension/coe-messages";
-import { TrustedPlayerId } from "./global";
+import { getSessionId, TrustedPlayerId } from "./global";
 import { StartLocalSessionParameters } from "./parameters";
-
-/**
- * 自身のセッションIDを取得する。
- */
-export function getSessionId(): SessionId {
-	return g.game.playId;
-}
 
 let localSessionCount: number = 0;
 

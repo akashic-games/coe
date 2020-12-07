@@ -31,6 +31,7 @@ export function getPermission(): Permission {
  * 自身のセッションIDを取得する。
  */
 export function getSessionId(): SessionId {
+	// @ts-ignore
 	return g.game.playId;
 }
 
@@ -75,12 +76,16 @@ export function initialize(params: InitializeParameters): void {
 		messageEventHandler.initialize(game);
 	}
 
-	game.join.add(e => {
-		if (e.player.id != null) addJoinedPlayer(e.player.id);
-	});
-	game.leave.add(e => {
-		if (e.player.id != null) removeJoinedPlayer(e.player.id);
-	});
+	game.onJoin.add(handleJoinEvent);
+	game.onLeave.add(handleLeaveEvent);
+}
+
+function handleJoinEvent(e?: g.JoinEvent): void {
+	if (e && e.player && e.player.id) addJoinedPlayer(e.player.id);
+}
+
+function handleLeaveEvent(e?: g.LeaveEvent): void {
+	if (e && e.player && e.player.id) removeJoinedPlayer(e.player.id);
 }
 
 /**
