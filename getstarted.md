@@ -65,13 +65,14 @@ COE フレームワークアプリケーションを利用した簡単なサン�
 5. Controller が回答結果をブロードキャストし、それを View が描画
 
 以上を TypeScript のミニマムコードで再現してみます。
+手順の途中では TypeScript の型エラーが発生しますが、完了時にはビルドして実行できるようになります。
 
 ## 1. Controller の作成
 
 ### 1.1 Controller のクラス作成
 
 最初にアンケートの Controller を作成します。
-ここでは coe の COEController を継承させて実装してみます。
+ここでは coe の COEController を継承させて、 `EnqueteController.ts` として `./src` 以下に実装してみます。
 
 ```typescript
 import { COEController } from "@akashic-extension/coe";
@@ -96,7 +97,7 @@ export class EnqueteController extends COEController<EnqueteCommand, EnqueteActi
 
 ### 1.2 アンケートの質問文・回答選択肢のブロードキャスト
 
-`COEController#broadcast()` を利用して View にアンケートの質問文・回答選択肢をブロードキャストします。
+先の実装に追加して、 `COEController#broadcast()` を利用して View にアンケートの質問文・回答選択肢をブロードキャストします。
 
 ```typescript
 export class EnqueteController extends COEController<EnqueteCommand, EnqueteActionData> {
@@ -120,16 +121,17 @@ Controller から送信された Command は `coe.Scene#commandReceived` トリ�
 
 ```typescript
 import { Scene, SceneParameters } from "@akashic-extension/coe";
-import { EnqueteCommand, EnqueteActionData, EnqueteCommandType, EnqueteActionType } from "./EnqueteController";
+import { EnqueteCommand, EnqueteActionData } from "./EnqueteController";
 
 export interface EnqueteSceneParameter extends SceneParameters<EnqueteCommand, EnqueteActionData> {}
 
 export class EnqueteScene extends Scene<EnqueteCommand, EnqueteActionData> {
 	private font: g.DynamicFont;
+	private currentTopic: string;
 
 	constructor(param: EnqueteSceneParameter) {
 		super(param);
-		this.loaded.addOnce(this.onLoaded, this);
+		this.onLoad.addOnce(this.onLoaded, this);
 		this.commandReceived.add(this.onCommandReceived, this);
 	}
 
@@ -251,7 +253,7 @@ export class EnqueteController extends COEController<EnqueteCommand, EnqueteActi
 		super.destroy();
 	}
 
-	onActionReceived(action: EnqueteVoteAction): void {
+	onActionReceived(action: Action<EnqueteVoteAction>): void {
 		if (typeof action.data.votedIndex !== "number") {
 			return;
 		}
@@ -331,6 +333,7 @@ Message に type: `"start" | "result"` が追加されたため、それも合�
 		const scene = this;
 
 		if (command.type === "start") {
+			this.currentTopic = command.topic;
 			// 質問文の描画
 			const topic = new g.Label({
 				scene,
@@ -369,22 +372,22 @@ Message に type: `"start" | "result"` が追加されたため、それも合�
 				font,
 				fontSize: 30,
 				textColor: "#880000",
-				text: message.topic
+				text: this.currentTopic
 			});
-			view.append(topic);
+			scene.append(topic);
 
 			command.choices.forEach((choice, i) => {
 				const label = new g.Label({
 					scene,
 					font,
 					fontSize: 30,
-					text: choice,
+					text: choice.toString(),
 					x: 170,
 					y: 50 + 50 * i,
 					width: scene.game.width,
 					height: 30
 				});
-				view.append(label);
+				scene.append(label);
 			});
 		}
 	}
