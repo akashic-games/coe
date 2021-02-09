@@ -7,7 +7,7 @@
 Akashic Engine を用いたゲームコンテンツの制作経験がある方を対象にしています。
 Akashic Engine のゲームコンテンツ作成に関する入門は以下ウェブサイトなどを参照してください。
 
-* https://akashic-games.github.io/tutorial/v2/
+* https://akashic-games.github.io/tutorial/v3/
 
 以下に本ページのサンプルを公開しています。適宜参照してください。
 
@@ -65,7 +65,6 @@ COE フレームワークアプリケーションを利用した簡単なサン�
 5. Controller が回答結果をブロードキャストし、それを View が描画
 
 以上を TypeScript のミニマムコードで再現してみます。
-手順の途中では TypeScript の型エラーが発生しますが、完了時にはビルドして実行できるようになります。
 
 ## 1. Controller の作成
 
@@ -90,7 +89,7 @@ export interface EnqueteControllerParameter {
 
 export class EnqueteController extends COEController<EnqueteCommand, EnqueteActionData> {
 	constructor(param: EnqueteControllerParameter) {
-		// Controller の初期化処理
+		super();
 	}
 }
 ```
