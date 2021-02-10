@@ -90,6 +90,7 @@ export interface EnqueteControllerParameter {
 export class EnqueteController extends COEController<EnqueteCommand, EnqueteActionData> {
 	constructor(param: EnqueteControllerParameter) {
 		super();
+		// Controller の初期化処理
 	}
 }
 ```
