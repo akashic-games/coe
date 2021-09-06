@@ -1,6 +1,6 @@
 {
   "name": "@akashic-environment/coe-plugin",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "Interface definitions for COE plugin",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",

@@ -1,6 +1,6 @@
 {
   "name": "@akashic-extension/coe",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A co-experience library for Akashic Engine",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
@@ -44,8 +44,8 @@
     "typescript": "~4.0.5"
   },
   "dependencies": {
-    "@akashic-environment/coe-plugin": "~4.1.0",
-    "@akashic-extension/coe-messages": "~3.1.0",
+    "@akashic-environment/coe-plugin": "4.2.0",
+    "@akashic-extension/coe-messages": "3.2.0",
     "@akashic/akashic-engine": "~3.1.2"
   },
   "jest": {
