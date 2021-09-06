@@ -86,9 +86,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 			}
 			const buffer = this._controller.getBroadcastDataBuffer();
 			if (buffer) {
-				filtered.push(
-					...buffer.map<pl.Event>(({ data, priority }) => [0x20, priority, null, data])
-				);
+				filtered.push(...buffer.map<pl.Event>(({ data, priority }) => [0x20, priority, null, data]));
 			}
 		}
 
@@ -102,12 +100,12 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 				continue;
 			}
 
-			if (type === 0x20 && playerId != null) {
+			if (type === 0x20) {
 				// g.MessageEvent
 				// 信頼されているメッセージ (playerId === TrustedPlayerId) かどうかは、各アプリケーション実装者が判断する。
 				this._controller.actionReceived.fire({
 					player: {
-						id: playerId
+						id: playerId ?? undefined
 					},
 					data: pev[3]
 				});
