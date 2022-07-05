@@ -131,14 +131,14 @@ export class EnqueteScene extends Scene<EnqueteCommand, EnqueteActionData> {
 
 	constructor(param: EnqueteSceneParameter) {
 		super(param);
-		this.onLoad.addOnce(this.onLoadHandler, this);
-		this.onCommandReceive.add(this.onCommandReceiveHandler, this);
+		this.onLoad.addOnce(this.handleLoad, this);
+		this.onCommandReceive.add(this.handleCommandReceive, this);
 	}
 
 	/**
 	 * 本 Scene の読み込み時の処理
 	 */
-	private onLoadHandler() {
+	private handleLoad() {
 		const font = new g.DynamicFont({
 			game: g.game,
 			fontFamily: g.FontFamily.SansSerif,
@@ -147,7 +147,7 @@ export class EnqueteScene extends Scene<EnqueteCommand, EnqueteActionData> {
 		this.font = font;
 	}
 
-	private onCommandReceiveHandler(command: EnqueteCommand) {
+	private handleCommandReceive(command: EnqueteCommand) {
 		const font = this.font;
 		const scene = this;
 
@@ -196,7 +196,7 @@ export class EnqueteScene extends Scene<EnqueteCommand, EnqueteActionData> {
 
 Action の送信は `coe.Scene#send()` を利用します。
 
-`EnqueteScene#onCommandReceiveHandler()` に以下の処理を追加してみましょう。
+`EnqueteScene#handleCommandReceive()` に以下の処理を追加してみましょう。
 
 ```typescript
 command.choices.forEach((choice, i) => {
@@ -243,17 +243,17 @@ export class EnqueteController extends COEController<EnqueteCommand, EnqueteActi
 		...
 
 		// トリガの登録
-		this.onActionReceive.add(this.onActionReceiveHandler, this);
+		this.onActionReceive.add(this.handleActionReceive, this);
 	}
 
 	destroy(): void {
 		// トリガの解除
-		this.onActionReceive.remove(this.onActionReceiveHandler, this);
+		this.onActionReceive.remove(this.handleActionReceive, this);
 
 		super.destroy();
 	}
 
-	onActionReceiveHandler(action: Action<EnqueteVoteAction>): void {
+	handleActionReceive(action: Action<EnqueteVoteAction>): void {
 		if (typeof action.data.votedIndex !== "number") {
 			return;
 		}
@@ -328,7 +328,7 @@ Message に type: `"start" | "result"` が追加されたため、それも合�
 ```typescript
 	...
 
-	private onCommandReceiveHandler(command: EnqueteCommand) {
+	private handleCommandReceive(command: EnqueteCommand) {
 		const font = this.font;
 		const scene = this;
 
