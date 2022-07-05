@@ -28,15 +28,15 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 	/**
 	 * @deprecated 非推奨である。将来的に削除される。代わりに `onLoad` を利用すること。
 	 */
-	loaded: g.Trigger<void> = this.onLoad; // new g.Trigger();
+	loaded: g.Trigger<void> = this.onLoad;
 	/**
 	 * @deprecated 非推奨である。将来的に削除される。代わりに `onUpdate` を利用すること。
 	 */
-	update: g.Trigger<void> = this.onUpdate; // new g.Trigger();
+	update: g.Trigger<void> = this.onUpdate;
 	/**
 	 * @deprecated 非推奨である。将来的に削除される。代わりに `onActionReceive` を利用すること。
 	 */
-	actionReceived: g.Trigger<Action<ActionData>> = this.onActionReceive; // new g.Trigger();
+	actionReceived: g.Trigger<Action<ActionData>> = this.onActionReceive;
 
 	private timerManager: g.TimerManager;
 	private broadcastDataBuffer: BroadcastDataBuffer<any>[] = [];
