@@ -28,7 +28,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 	 * `this.send()` のみで Controller と通信を行うべきである。
 	 */
 	protected _controller: BaseController<Command, ActionData>;
-	private onEventFiltered_bound: g.EventFilter;
+	private handleEventFiltere_bound: g.EventFilter;
 
 	constructor(params: SceneParameters<Command, ActionData>) {
 		super({
@@ -39,9 +39,9 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 
 		this._generatesTickManually = this.tickGenerationMode === "manual";
 		this._controller = params.controller;
-		this.onEventFiltered_bound = this.onEventFiltered.bind(this);
-		this.onMessage.add(this.onReceivedMessageEvent, this);
-		this.onStateChange.add(this.onStateChanged, this);
+		this.handleEventFiltere_bound = this.handleEventFiltere.bind(this);
+		this.onMessage.add(this.handleReceivedMessageEvent, this);
+		this.onStateChange.add(this.handleStateChange, this);
 
 		if (g.game.isActiveInstance()) {
 			this.onUpdate.add(this.fireControllerUpdate, this);
@@ -62,12 +62,12 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 	// override
 	destroy() {
 		this.onCommandReceive.destroy();
-		this.game.removeEventFilter(this.onEventFiltered_bound);
-		this.onMessage.remove(this.onReceivedMessageEvent, this);
+		this.game.removeEventFilter(this.handleEventFiltere_bound);
+		this.onMessage.remove(this.handleReceivedMessageEvent, this);
 
 		this.onCommandReceive = null!;
 		this._controller = null!;
-		this.onEventFiltered_bound = null!;
+		this.handleEventFiltere_bound = null!;
 
 		super.destroy();
 	}
@@ -76,7 +76,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 		this._controller.onUpdate.fire();
 	}
 
-	private onEventFiltered(pevs: pl.Event[], { processNext }: g.EventFilterController): pl.Event[] {
+	private handleEventFiltere(pevs: pl.Event[], { processNext }: g.EventFilterController): pl.Event[] {
 		const filtered: pl.Event[] = [];
 
 		if (!this._generatesTickManually) {
@@ -126,16 +126,16 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 		this.game.raiseTick([timestamp, ...events]);
 	}
 
-	private onReceivedMessageEvent(message?: g.MessageEvent): void {
+	private handleReceivedMessageEvent(message?: g.MessageEvent): void {
 		if (!message) return;
 		this.onCommandReceive.fire(message.data);
 	}
 
-	private onStateChanged(state?: g.SceneStateString): void {
+	private handleStateChange(state?: g.SceneStateString): void {
 		if (state === "deactive" || state === "before-destroyed") {
-			this.game.removeEventFilter(this.onEventFiltered_bound);
+			this.game.removeEventFilter(this.handleEventFiltere_bound);
 		} else if (state === "active") {
-			this.game.addEventFilter(this.onEventFiltered_bound, true);
+			this.game.addEventFilter(this.handleEventFiltere_bound, true);
 			this._sentInitialEvents = false;
 		}
 	}

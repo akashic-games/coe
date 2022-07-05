@@ -19,7 +19,7 @@ export class COEController<Command, ActionData> extends BaseController<Command, 
 
 	constructor() {
 		super();
-		this.onActionReceive.add(this.onCOEMessageEventReceived, this);
+		this.onActionReceive.add(this.handleCOEMessageEventReceive, this);
 	}
 
 	/**
@@ -45,14 +45,14 @@ export class COEController<Command, ActionData> extends BaseController<Command, 
 
 	// override
 	destroy(): void {
-		this.onActionReceive.remove(this.onCOEMessageEventReceived, this);
+		this.onActionReceive.remove(this.handleCOEMessageEventReceive, this);
 		this.onStartSessionRequeste.destroy();
 		this.onStartSessionRequeste = null!;
 		this.startSessionRequested = null!;
 		super.destroy();
 	}
 
-	private onCOEMessageEventReceived(action?: Action<any>) {
+	private handleCOEMessageEventReceive(action?: Action<any>) {
 		if (action && action.data && isTrustedAction(action)) {
 			if (action.data.type === "start") {
 				this.onStartSessionRequeste.fire(action.data);
