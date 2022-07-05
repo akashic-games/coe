@@ -10,12 +10,12 @@ export class COEController<Command, ActionData> extends BaseController<Command, 
 	/**
 	 * COESessionStartMessage を信用された経路から送信された際に呼び出される trigger 。
 	 */
-	onStartSessionRequeste: g.Trigger<COESessionStartMessage<any>> = new g.Trigger();
+	onStartSessionRequest: g.Trigger<COESessionStartMessage<any>> = new g.Trigger();
 
 	/**
-	 * @deprecated 非推奨である。将来的に削除される。代わりに `onStartSessionRequeste` を利用すること。
+	 * @deprecated 非推奨である。将来的に削除される。代わりに `onStartSessionRequest` を利用すること。
 	 */
-	startSessionRequested: g.Trigger<COESessionStartMessage<any>> = this.onStartSessionRequeste;
+	startSessionRequested: g.Trigger<COESessionStartMessage<any>> = this.onStartSessionRequest;
 
 	constructor() {
 		super();
@@ -46,8 +46,8 @@ export class COEController<Command, ActionData> extends BaseController<Command, 
 	// override
 	destroy(): void {
 		this.onActionReceive.remove(this.handleCOEMessageEventReceive, this);
-		this.onStartSessionRequeste.destroy();
-		this.onStartSessionRequeste = null!;
+		this.onStartSessionRequest.destroy();
+		this.onStartSessionRequest = null!;
 		this.startSessionRequested = null!;
 		super.destroy();
 	}
@@ -55,7 +55,7 @@ export class COEController<Command, ActionData> extends BaseController<Command, 
 	private handleCOEMessageEventReceive(action?: Action<any>) {
 		if (action && action.data && isTrustedAction(action)) {
 			if (action.data.type === "start") {
-				this.onStartSessionRequeste.fire(action.data);
+				this.onStartSessionRequest.fire(action.data);
 				this.lockingProcessingMessageEvent = true;
 				this.onUpdate.addOnce(() => {
 					this.lockingProcessingMessageEvent = false;
