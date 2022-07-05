@@ -16,7 +16,8 @@ export interface SceneParameters<Command, ActionData> extends g.SceneParameterOb
  * * tickGenerationMode: "manual"
  */
 export class Scene<Command, ActionData> extends g.Scene implements View<Command, ActionData> {
-	commandReceived: g.Trigger<Command> = new g.Trigger();
+	onCommandReceive: g.Trigger<Command> = new g.Trigger();
+	commandReceived: g.Trigger<Command> = this.onCommandReceive;
 	private _generatesTickManually: boolean = false;
 	private _sentInitialEvents: boolean = false;
 
@@ -49,7 +50,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 			}
 			this.onLoad.addOnce(() => {
 				this._controller.assets = this.assets;
-				this._controller.loaded.fire();
+				this._controller.onLoad.fire();
 			});
 		}
 	}
@@ -60,11 +61,11 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 
 	// override
 	destroy() {
-		this.commandReceived.destroy();
+		this.onCommandReceive.destroy();
 		this.game.removeEventFilter(this.onEventFiltered_bound);
 		this.onMessage.remove(this.onReceivedMessageEvent, this);
 
-		this.commandReceived = null!;
+		this.onCommandReceive = null!;
 		this._controller = null!;
 		this.onEventFiltered_bound = null!;
 
@@ -72,7 +73,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 	}
 
 	private fireControllerUpdate(): void {
-		this._controller.update.fire();
+		this._controller.onUpdate.fire();
 	}
 
 	private onEventFiltered(pevs: pl.Event[], { processNext }: g.EventFilterController): pl.Event[] {
@@ -103,7 +104,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 			if (type === 0x20) {
 				// g.MessageEvent
 				// 信頼されているメッセージ (playerId === TrustedPlayerId) かどうかは、各アプリケーション実装者が判断する。
-				this._controller.actionReceived.fire({
+				this._controller.onActionReceive.fire({
 					player: {
 						id: playerId ?? undefined
 					},
@@ -127,7 +128,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 
 	private onReceivedMessageEvent(message?: g.MessageEvent): void {
 		if (!message) return;
-		this.commandReceived.fire(message.data);
+		this.onCommandReceive.fire(message.data);
 	}
 
 	private onStateChanged(state?: g.SceneStateString): void {

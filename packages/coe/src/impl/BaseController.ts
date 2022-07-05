@@ -9,7 +9,7 @@ interface BroadcastDataBuffer<T> {
 export class BaseController<Command, ActionData> implements Controller<Command, ActionData> {
 	/**
 	 * 本 Controller と紐づく Scene のアセット情報。
-	 * `this.loaded` の発火以降しか取得できない点に注意。
+	 * `this.onLoad` の発火以降しか取得できない点に注意。
 	 */
 	assets: { [assetId: string]: g.Asset } = {};
 	/**
@@ -21,15 +21,28 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 	/**
 	 * 本 controller によるイベントの消化を一時的にロックするかどうか。
 	 */
-	loaded: g.Trigger<void> = new g.Trigger();
-	update: g.Trigger<void> = new g.Trigger();
-	actionReceived: g.Trigger<Action<ActionData>> = new g.Trigger();
+	onLoad: g.Trigger<void> = new g.Trigger();
+	onUpdate: g.Trigger<void> = new g.Trigger();
+	onActionReceive: g.Trigger<Action<ActionData>> = new g.Trigger();
+
+	/**
+	 * @deprecated 非推奨である。将来的に削除される。代わりに `onLoad` を利用すること。
+	 */
+	loaded: g.Trigger<void> = this.onLoad; // new g.Trigger();
+	/**
+	 * @deprecated 非推奨である。将来的に削除される。代わりに `onUpdate` を利用すること。
+	 */
+	update: g.Trigger<void> = this.onUpdate; // new g.Trigger();
+	/**
+	 * @deprecated 非推奨である。将来的に削除される。代わりに `onActionReceive` を利用すること。
+	 */
+	actionReceived: g.Trigger<Action<ActionData>> = this.onActionReceive; // new g.Trigger();
 
 	private timerManager: g.TimerManager;
 	private broadcastDataBuffer: BroadcastDataBuffer<any>[] = [];
 
 	constructor() {
-		this.timerManager = new g.TimerManager(this.update, g.game.fps);
+		this.timerManager = new g.TimerManager(this.onUpdate, g.game.fps);
 	}
 
 	/**
@@ -58,13 +71,16 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 	}
 
 	destroy(): void {
-		this.update.destroy();
-		this.loaded.destroy();
-		this.actionReceived.destroy();
+		this.onUpdate.destroy();
+		this.onLoad.destroy();
+		this.onActionReceive.destroy();
 
 		this.assets = null!;
 		this.timerManager = null!;
 		this.broadcastDataBuffer = null!;
+		this.onUpdate = null!;
+		this.onLoad = null!;
+		this.onActionReceive = null!;
 		this.update = null!;
 		this.loaded = null!;
 		this.actionReceived = null!;
