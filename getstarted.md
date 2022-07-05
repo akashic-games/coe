@@ -117,7 +117,7 @@ export class EnqueteController extends COEController<EnqueteCommand, EnqueteActi
 
 次にアンケートアプリケーションの View にあたる `EnqueteScene` クラスを `EnqueteScene.ts` として `./src` 以下に作成します。
 
-Controller から送信された Command は `coe.Scene#commandReceived` トリガによって受信することができます。
+Controller から送信された Command は `coe.Scene#onCommandReceive` トリガによって受信することができます。
 
 ```typescript
 import { Scene, SceneParameters } from "@akashic-extension/coe";
@@ -131,14 +131,14 @@ export class EnqueteScene extends Scene<EnqueteCommand, EnqueteActionData> {
 
 	constructor(param: EnqueteSceneParameter) {
 		super(param);
-		this.onLoad.addOnce(this.onLoaded, this);
-		this.commandReceived.add(this.onCommandReceived, this);
+		this.onLoad.addOnce(this.onLoadHandler, this);
+		this.onCommandReceive.add(this.onCommandReceiveHandler, this);
 	}
 
 	/**
 	 * 本 Scene の読み込み時の処理
 	 */
-	private onLoaded() {
+	private onLoadHandler() {
 		const font = new g.DynamicFont({
 			game: g.game,
 			fontFamily: g.FontFamily.SansSerif,
@@ -147,7 +147,7 @@ export class EnqueteScene extends Scene<EnqueteCommand, EnqueteActionData> {
 		this.font = font;
 	}
 
-	private onCommandReceived(command: EnqueteCommand) {
+	private onCommandReceiveHandler(command: EnqueteCommand) {
 		const font = this.font;
 		const scene = this;
 
@@ -196,7 +196,7 @@ export class EnqueteScene extends Scene<EnqueteCommand, EnqueteActionData> {
 
 Action の送信は `coe.Scene#send()` を利用します。
 
-`EnqueteScene#onCommandReceived()` に以下の処理を追加してみましょう。
+`EnqueteScene#onCommandReceiveHandler()` に以下の処理を追加してみましょう。
 
 ```typescript
 command.choices.forEach((choice, i) => {
@@ -223,7 +223,7 @@ command.choices.forEach((choice, i) => {
 
 ## 3. Action の受信
 
-View から送信された Action は `Controller#actionReceived` トリガによって受け取れます。
+View から送信された Action は `Controller#onActionReceive` トリガによって受け取れます。
 
 先程の回答内容を受け取り、それを集計してみましょう。
 
@@ -243,17 +243,17 @@ export class EnqueteController extends COEController<EnqueteCommand, EnqueteActi
 		...
 
 		// トリガの登録
-		this.actionReceived.add(this.onActionReceived, this);
+		this.onActionReceive.add(this.onActionReceiveHandler, this);
 	}
 
 	destroy(): void {
 		// トリガの解除
-		this.actionReceived.remove(this.onActionReceived, this);
+		this.onActionReceive.remove(this.onActionReceiveHandler, this);
 
 		super.destroy();
 	}
 
-	onActionReceived(action: Action<EnqueteVoteAction>): void {
+	onActionReceiveHandler(action: Action<EnqueteVoteAction>): void {
 		if (typeof action.data.votedIndex !== "number") {
 			return;
 		}
@@ -328,7 +328,7 @@ Message に type: `"start" | "result"` が追加されたため、それも合�
 ```typescript
 	...
 
-	private onCommandReceived(command: EnqueteCommand) {
+	private onCommandReceiveHandler(command: EnqueteCommand) {
 		const font = this.font;
 		const scene = this;
 
