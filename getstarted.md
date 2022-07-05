@@ -202,7 +202,7 @@ Action の送信は `coe.Scene#send()` を利用します。
 command.choices.forEach((choice, i) => {
 	...
 
-	label.pointDown.addOnce(() => {
+	label.onPointDown.addOnce(() => {
 		label.textColor = "red";
 		label.touchable = false;
 		label.invalidate();

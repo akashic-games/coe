@@ -89,7 +89,7 @@ g.game.raiseEvent(new g.MessageEvent({
 ```javascript
 
 // 全ユーザ
-scene.message.add(message => {
+scene.onMessage.add(message => {
 	console.log(message.data) // { answer: "答え" }
 	...
 });
