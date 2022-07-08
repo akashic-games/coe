@@ -355,7 +355,7 @@ Message に type: `"start" | "result"` が追加されたため、それも合�
 					height: 30,
 					touchable: true
 				});
-				label.pointDown.addOnce(() => {
+				label.onPointDown.addOnce(() => {
 					label.textColor = "red";
 					label.touchable = false;
 					label.invalidate();
