@@ -19,7 +19,6 @@ jobs:
           git config user.name 'github-actions'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           npm install
-          npm run doc
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
