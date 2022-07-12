@@ -40,7 +40,7 @@ function main(args) {
         });
     });
 
-    scene.loaded.add(() => {
+    scene.onLoad.add(() => {
         // ...
     });
 }

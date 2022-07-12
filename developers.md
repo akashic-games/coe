@@ -89,7 +89,7 @@ g.game.raiseEvent(new g.MessageEvent({
 ```javascript
 
 // 全ユーザ
-scene.message.add(message => {
+scene.onMessage.add(message => {
 	console.log(message.data) // { answer: "答え" }
 	...
 });
@@ -113,7 +113,7 @@ scene.send({
 
 let answer;
 
-controller.actionReceived.add(action => {
+controller.onActionReceive.add(action => {
 	if (action.player.id === "出題者") {
 		answer = action.data.answer;
 	} else if (answer && action.data.answer === answer) {
@@ -126,7 +126,7 @@ controller.actionReceived.add(action => {
 ```
 
 Controller は、あるプレイの全てのインスタンスのうち、ただ一箇所 (通常はサーバ上) でのみ動作するオブジェクトです。
-ユーザの手元で actionReceived が fire されることがありません。
+ユーザの手元で onActionReceive が fire されることがありません。
 
 ### 手動進行と自動進行
 
@@ -242,7 +242,7 @@ if (coe.hasRole("broadcaster")) {
 (ただし Controller でのみ判定可能です。)
 
 ```typescript
-controller.actionReceived.add(action => {
+controller.onActionReceive.add(action => {
 	if (coe.isJoinedPlayer(action.player.id)) {
 		// 配信者の Action
 	}
