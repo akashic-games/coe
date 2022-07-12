@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/akashic-games/coe/blob/master/img/akashic.png"/>
+<img src="https://raw.githubusercontent.com/akashic-games/coe/master/img/akashic.png"/>
 </p>
 
 # coe
@@ -9,6 +9,7 @@
 本フレームワークについては以下の文書を参照してください。
 * [共体験アプリケーションの開発手引き](https://github.com/akashic-games/coe/blob/master/getstarted.md)
 * [共体験アプリケーションの開発者向け文書](https://github.com/akashic-games/coe/blob/master/developers.md)
+* [APIリファレンス](https://akashic-games.github.io/coe/api/)
 
 ### インストール
 
