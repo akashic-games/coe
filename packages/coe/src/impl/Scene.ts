@@ -132,7 +132,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 	}
 
 	private handleStateChange(state?: g.SceneStateString): void {
-		if (state === "deactive" || state === "before-destroyed") {
+		if (state === "deactive") {
 			this.game.removeEventFilter(this.handleEventFilter_bound);
 		} else if (state === "active") {
 			this.game.addEventFilter(this.handleEventFilter_bound, true);
