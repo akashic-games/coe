@@ -13,6 +13,10 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 	 */
 	assets: { [assetId: string]: g.Asset } = {};
 	/**
+	 * 本 Controller と紐づく Scene のアセットへのアクセサ。
+	 */
+	asset: g.AssetAccessor = new g.AssetAccessor(g.game._assetManager);
+	/**
 	 * 本 controller による g.MessageEvent の処理を一時的にロックするかどうか。
 	 *
 	 * 通常、ゲーム開発者は本値を参照・また書き換えてはならない。
