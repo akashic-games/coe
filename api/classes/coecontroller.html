@@ -117,6 +117,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="coecontroller.html#actionreceived" class="tsd-kind-icon">action<wbr>Received</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="coecontroller.html#asset" class="tsd-kind-icon">asset</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="coecontroller.html#assets" class="tsd-kind-icon">assets</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="coecontroller.html#loaded" class="tsd-kind-icon">loaded</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="coecontroller.html#lockingprocessingmessageevent" class="tsd-kind-icon">locking<wbr>Processing<wbr>Message<wbr>Event</a></li>
@@ -158,7 +159,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/COEController.ts#L18">packages/coe/src/impl/COEController.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/COEController.ts#L18">packages/coe/src/impl/COEController.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="coecontroller.html" class="tsd-signature-type">COEController</a></h4>
@@ -176,7 +177,7 @@
 						<p>Implementation of <a href="../interfaces/controller.html">Controller</a>.<a href="../interfaces/controller.html#actionreceived">actionReceived</a></p>
 						<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#actionreceived">actionReceived</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L39">packages/coe/src/impl/BaseController.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L43">packages/coe/src/impl/BaseController.ts:43</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -188,13 +189,29 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="asset" class="tsd-anchor"></a>
+					<h3>asset</h3>
+					<div class="tsd-signature tsd-kind-icon">asset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AssetAccessor</span><span class="tsd-signature-symbol"> = new g.AssetAccessor(g.game._assetManager)</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#asset">asset</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L18">packages/coe/src/impl/BaseController.ts:18</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>本 Controller と紐づく Scene のアセットへのアクセサ。</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="assets" class="tsd-anchor"></a>
 					<h3>assets</h3>
 					<div class="tsd-signature tsd-kind-icon">assets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#assets">assets</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L14">packages/coe/src/impl/BaseController.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L14">packages/coe/src/impl/BaseController.ts:14</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -219,7 +236,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#loaded">loaded</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L31">packages/coe/src/impl/BaseController.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L35">packages/coe/src/impl/BaseController.ts:35</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -237,7 +254,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#lockingprocessingmessageevent">lockingProcessingMessageEvent</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L20">packages/coe/src/impl/BaseController.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L24">packages/coe/src/impl/BaseController.ts:24</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -255,7 +272,7 @@
 						<p>Implementation of <a href="../interfaces/controller.html">Controller</a>.<a href="../interfaces/controller.html#onactionreceive">onActionReceive</a></p>
 						<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#onactionreceive">onActionReceive</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L26">packages/coe/src/impl/BaseController.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L30">packages/coe/src/impl/BaseController.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -266,7 +283,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#onload">onLoad</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L24">packages/coe/src/impl/BaseController.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L28">packages/coe/src/impl/BaseController.ts:28</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -281,7 +298,7 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Start<wbr>Session<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">COESessionStartMessage</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new g.Trigger()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/COEController.ts#L13">packages/coe/src/impl/COEController.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/COEController.ts#L13">packages/coe/src/impl/COEController.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -297,7 +314,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#onupdate">onUpdate</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L25">packages/coe/src/impl/BaseController.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L29">packages/coe/src/impl/BaseController.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -307,7 +324,7 @@
 					<div class="tsd-signature tsd-kind-icon">start<wbr>Session<wbr>Requested<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">COESessionStartMessage</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = this.onStartSessionRequest</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/COEController.ts#L18">packages/coe/src/impl/COEController.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/COEController.ts#L18">packages/coe/src/impl/COEController.ts:18</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -325,7 +342,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#update">update</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L35">packages/coe/src/impl/BaseController.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L39">packages/coe/src/impl/BaseController.ts:39</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -350,7 +367,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#broadcast">broadcast</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L53">packages/coe/src/impl/BaseController.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L57">packages/coe/src/impl/BaseController.ts:57</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -387,7 +404,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/COEController.ts#L31">packages/coe/src/impl/COEController.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/COEController.ts#L31">packages/coe/src/impl/COEController.ts:31</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -420,7 +437,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#clearinterval">clearInterval</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L69">packages/coe/src/impl/BaseController.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L73">packages/coe/src/impl/BaseController.ts:73</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -444,7 +461,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#cleartimeout">clearTimeout</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L65">packages/coe/src/impl/BaseController.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L69">packages/coe/src/impl/BaseController.ts:69</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -468,7 +485,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#destroy">destroy</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/COEController.ts#L47">packages/coe/src/impl/COEController.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/COEController.ts#L47">packages/coe/src/impl/COEController.ts:47</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -486,7 +503,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#getbroadcastdatabuffer">getBroadcastDataBuffer</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L89">packages/coe/src/impl/BaseController.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L94">packages/coe/src/impl/BaseController.ts:94</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/broadcastdatabuffer.html" class="tsd-signature-type">BroadcastDataBuffer</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
@@ -503,7 +520,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/COEController.ts#L55">packages/coe/src/impl/COEController.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/COEController.ts#L55">packages/coe/src/impl/COEController.ts:55</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -527,7 +544,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#setinterval">setInterval</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L61">packages/coe/src/impl/BaseController.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L65">packages/coe/src/impl/BaseController.ts:65</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -569,7 +586,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="basecontroller.html">BaseController</a>.<a href="basecontroller.html#settimeout">setTimeout</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/3e45887/packages/coe/src/impl/BaseController.ts#L57">packages/coe/src/impl/BaseController.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/akashic-games/coe/blob/02987bf/packages/coe/src/impl/BaseController.ts#L61">packages/coe/src/impl/BaseController.ts:61</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -625,6 +642,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="coecontroller.html#actionreceived" class="tsd-kind-icon">action<wbr>Received</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="coecontroller.html#asset" class="tsd-kind-icon">asset</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="coecontroller.html#assets" class="tsd-kind-icon">assets</a>
