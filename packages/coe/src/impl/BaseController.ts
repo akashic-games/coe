@@ -80,6 +80,7 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 		this.onActionReceive.destroy();
 
 		this.assets = null!;
+		this.asset = null!;
 		this.timerManager = null!;
 		this.broadcastDataBuffer = null!;
 		this.onUpdate = null!;
