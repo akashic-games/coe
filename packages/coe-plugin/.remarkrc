@@ -1,5 +1,0 @@
-{
-  "plugins": [
-    "@akashic/remark-preset-lint"
-  ]
-}

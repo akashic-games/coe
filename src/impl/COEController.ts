@@ -1,6 +1,6 @@
-import { COESessionStartMessage } from "@akashic-extension/coe-messages";
+import type { COESessionStartMessage } from "@akashic-extension/coe-messages";
 import { getSessionId, isTrustedAction } from "../global";
-import { Action } from "../parameters";
+import type { Action } from "../parameters";
 import { BaseController } from "./BaseController";
 
 /**
@@ -52,7 +52,7 @@ export class COEController<Command, ActionData> extends BaseController<Command, 
 		super.destroy();
 	}
 
-	private handleCOEMessageEventReceive(action?: Action<any>) {
+	private handleCOEMessageEventReceive(action?: Action<any>): void {
 		if (action && action.data && isTrustedAction(action)) {
 			if (action.data.type === "start") {
 				this.onStartSessionRequest.fire(action.data);

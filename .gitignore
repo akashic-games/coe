@@ -1,9 +1,6 @@
-## directory
-node_modules
-lib
+node_modules/
+lib/
+public/
 
-## log file
-npm-debug.log
-
-## packed file
+*.log
 *.tgz

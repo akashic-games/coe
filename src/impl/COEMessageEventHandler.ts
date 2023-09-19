@@ -1,4 +1,4 @@
-import { COEChildSessionEndMessage, COEChildSessionStartMessage, COEEndMessage } from "@akashic-extension/coe-messages";
+import type { COEChildSessionEndMessage, COEChildSessionStartMessage, COEEndMessage } from "@akashic-extension/coe-messages";
 import { exit, exitSession, startSession } from "../global";
 import { SceneWatcher } from "../SceneWatcher";
 

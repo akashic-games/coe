@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["es5"],
+    "outDir": "./lib",
+    "noImplicitAny": true,
+    "module": "commonjs" ,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "strict": true,
+    "allowUmdGlobalAccess": true
+  },
+  "files": [
+    "./node_modules/@akashic/akashic-engine/index.runtime.d.ts"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/**/__tests__/**/*.ts"
+  ]
+}

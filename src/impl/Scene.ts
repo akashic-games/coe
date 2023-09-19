@@ -1,6 +1,6 @@
-import * as pl from "@akashic/playlog";
-import { View } from "../View";
-import { BaseController } from "./BaseController";
+import type * as pl from "@akashic/playlog";
+import type { View } from "../View";
+import type { BaseController } from "./BaseController";
 
 export interface SceneParameters<Command, ActionData> extends g.SceneParameterObject {
 	local?: "interpolate-local" | "non-local";
@@ -60,7 +60,7 @@ export class Scene<Command, ActionData> extends g.Scene implements View<Command,
 	}
 
 	// override
-	destroy() {
+	destroy(): void {
 		this.onCommandReceive.destroy();
 		this.game.removeEventFilter(this.handleEventFilter_bound);
 		this.onMessage.remove(this.handleMessageEventReceive, this);
