@@ -1,11 +1,11 @@
-import {
+import type {
 	ApplicationIdentifier,
 	COEContentSize,
 	COEEndMessage,
 	COEExternalMessage,
 	COESessionStartMessage
 } from "@akashic-extension/coe-messages";
-import { SceneWatcher } from "./SceneWatcher";
+import type { SceneWatcher } from "./SceneWatcher";
 
 /**
  * g.GameMainParameterObject#args に渡されることを想定するインターフェース。

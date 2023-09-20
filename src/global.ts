@@ -1,14 +1,14 @@
-import { COEExitSessionParameters, COEPlugin, COEStartSessionParameters } from "@akashic-environment/coe-plugin";
-import { COEExternalMessage, SessionId } from "@akashic-extension/coe-messages";
+import type { COEExitSessionParameters, COEPlugin, COEStartSessionParameters } from "@akashic-environment/coe-plugin";
+import type { COEExternalMessage, SessionId } from "@akashic-extension/coe-messages";
 import { COEMessageEventHandler } from "./impl/COEMessageEventHandler";
-import { Action, InitializeArguments, InitializeParameters, Permission, StartLocalSessionParameters } from "./parameters";
+import type { Action, InitializeArguments, InitializeParameters, Permission, StartLocalSessionParameters } from "./parameters";
 
-declare var window: any;
+declare let window: any;
 
 /**
  * Akashic の Sandbox 環境で実行されているかどうかを判別する。
  */
-export function isSandbox() {
+export function isSandbox(): boolean {
 	return typeof window !== "undefined" && "gScriptContainer" in window;
 }
 
@@ -111,6 +111,7 @@ export function hasRole(roll: string): boolean {
 }
 
 // ":akashic" は事前に本番環境と取り決められた値で、現状はハードコーディングとする
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export const TrustedPlayerId = ":akashic";
 
 const joinedPlayerIds: string[] = [];

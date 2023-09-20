@@ -1,7 +1,7 @@
-import { COEExitSessionParameters, COEPlugin, COEStartSessionParameters } from "@akashic-environment/coe-plugin";
-import { COEExternalMessage, SessionId } from "@akashic-extension/coe-messages";
+import type { COEExitSessionParameters, COEPlugin, COEStartSessionParameters } from "@akashic-environment/coe-plugin";
+import type { COEExternalMessage, SessionId } from "@akashic-extension/coe-messages";
 import { getSessionId, TrustedPlayerId } from "./global";
-import { StartLocalSessionParameters } from "./parameters";
+import type { StartLocalSessionParameters } from "./parameters";
 
 let localSessionCount: number = 0;
 
