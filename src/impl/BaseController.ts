@@ -1,5 +1,5 @@
-import { Controller } from "../Controller";
-import { Action } from "../parameters";
+import type { Controller } from "../Controller";
+import type { Action } from "../parameters";
 
 interface BroadcastDataBuffer<T> {
 	data: T;
@@ -15,7 +15,7 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 	/**
 	 * 本 Controller と紐づく Scene のアセットへのアクセサ。
 	 */
-	asset: g.AssetAccessor = new g.AssetAccessor(g.game._assetManager);
+	asset: g.AssetAccessor;
 	/**
 	 * 本 controller による g.MessageEvent の処理を一時的にロックするかどうか。
 	 *
@@ -46,6 +46,7 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 	private broadcastDataBuffer: BroadcastDataBuffer<any>[] = [];
 
 	constructor() {
+		this.asset = new g.AssetAccessor(g.game._assetManager);
 		this.timerManager = new g.TimerManager(this.onUpdate, g.game.fps);
 	}
 

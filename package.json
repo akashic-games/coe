@@ -1,15 +1,17 @@
 {
   "name": "@akashic-extension/coe",
-  "private": true,
-  "version": "1.0.0",
+  "version": "2.2.2",
   "description": "A co-experience library for Akashic Engine",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
   "scripts": {
-    "postinstall": "lerna bootstrap",
-    "publish:patch": "lerna publish patch --yes",
-    "publish:minor": "lerna publish minor --yes",
-    "publish:major": "lerna publish major --yes",
-    "changelog": "echo \"# CHANGELOG\" > CHANGELOG.md && lerna-changelog --from=@akashic-extension/coe@1.0.0 >> CHANGELOG.md",
-    "test": "lerna run test"
+    "prepare": "npm run build && npm run doc",
+    "build": "rimraf ./lib && tsc -p ./tsconfig.json && npm run format",
+    "format": "prettier --write \"src/**/*.ts\" --config ./prettier.config.js",
+    "doc": "typedoc --out ./public/api src/index.ts",
+    "test": "npm run test:jest && npm run test:lint",
+    "test:jest": "jest",
+    "test:lint": "eslint src/**/*.ts --fix"
   },
   "repository": {
     "type": "git",
@@ -21,18 +23,55 @@
     "url": "https://github.com/akashic-games/coe/issues"
   },
   "homepage": "https://github.com/akashic-games/coe#readme",
-  "devDependencies": {
-    "lerna": "^4.0.0",
-    "lerna-changelog": "^1.0.1"
+  "publishConfig": {
+    "access": "public",
+    "@akashic-extension:registry": "https://registry.npmjs.org/"
   },
-  "changelog": {
-    "repo": "akashic-games/coe",
-    "labels": {
-      "breaking": "Breaking Change",
-      "enhancement": "Enhancement",
-      "bug": "Bug Fix",
-      "documentation": "Documentation",
-      "other": "Other Change"
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "dependencies": {
+    "@akashic-environment/coe-plugin": "4.2.0",
+    "@akashic-extension/coe-messages": "3.2.0",
+    "@akashic/akashic-engine": "~3.1.2"
+  },
+  "devDependencies": {
+    "@akashic/eslint-config": "^1.1.1",
+    "@types/jest": "^29.5.4",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "eslint": "^8.49.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jest": "^27.4.0",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.1",
+    "ts-jest": "^29.1.1",
+    "typedoc": "^0.25.1",
+    "typescript": "^5.2.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "transform": {
+      "^.+\\.ts$": [
+        "ts-jest",
+        {
+          "tsconfig": "tsconfig.jest.json"
+        }
+      ]
+    },
+    "testMatch": [
+      "<rootDir>/src/__tests__/**/*.spec.ts"
+    ],
+    "preset": "ts-jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && npm test"
     }
   }
 }

@@ -1,4 +1,4 @@
-import { Action } from "./parameters";
+import type { Action } from "./parameters";
 
 /**
  * 通信レイヤーにおける Action / Command の送受信時の処理を定義する抽象 Controller 。
