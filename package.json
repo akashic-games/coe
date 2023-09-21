@@ -32,9 +32,9 @@
     "README.md"
   ],
   "dependencies": {
-    "@akashic-environment/coe-plugin": "4.2.0",
-    "@akashic-extension/coe-messages": "3.2.0",
-    "@akashic/akashic-engine": "~3.1.2"
+    "@akashic-environment/coe-plugin": "~4.3.0",
+    "@akashic-extension/coe-messages": "~3.3.1",
+    "@akashic/akashic-engine": "~3.15.0"
   },
   "devDependencies": {
     "@akashic/eslint-config": "^1.1.1",
