@@ -99,6 +99,11 @@ npm run build
 npm test
 ```
 
+### テスト前に成果物の pack を無視する場合
+```sh
+npm run test-skip-install
+```
+
 ## ライセンス
 本リポジトリは MIT License の元で公開されています。
 詳しくは [LICENSE](https://github.com/akashic-games/coe/blob/master/LICENSE) をご覧ください。

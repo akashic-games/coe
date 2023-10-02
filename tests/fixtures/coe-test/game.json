@@ -1,0 +1,32 @@
+{
+  "width": 320,
+  "height": 320,
+  "fps": 30,
+  "main": "./script/main.js",
+  "assets": {
+    "main": {
+      "type": "script",
+      "path": "script/main.js",
+      "global": true
+    }
+  },
+  "environment": {
+    "sandbox-runtime": "3"
+  },
+  "moduleMainScripts": {
+    "@akashic-extension/coe": "node_modules/@akashic-extension/coe/lib/index.js"
+  },
+  "globalScripts": [
+    "node_modules/@akashic-extension/coe/lib/Controller.js",
+    "node_modules/@akashic-extension/coe/lib/SceneWatcher.js",
+    "node_modules/@akashic-extension/coe/lib/View.js",
+    "node_modules/@akashic-extension/coe/lib/global.js",
+    "node_modules/@akashic-extension/coe/lib/impl/BaseController.js",
+    "node_modules/@akashic-extension/coe/lib/impl/COEController.js",
+    "node_modules/@akashic-extension/coe/lib/impl/COEMessageEventHandler.js",
+    "node_modules/@akashic-extension/coe/lib/impl/Scene.js",
+    "node_modules/@akashic-extension/coe/lib/impl/index.js",
+    "node_modules/@akashic-extension/coe/lib/index.js",
+    "node_modules/@akashic-extension/coe/lib/parameters.js"
+  ]
+}
