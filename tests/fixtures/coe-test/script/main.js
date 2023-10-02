@@ -26,7 +26,7 @@ class Controller extends COEController {
   }
 
   handleStartSessionRequest(session) {
-    // console.log("action received", action);
+    // console.log("session parameter received", session);
     stackSnapshot({
       name: "start-session",
       parameter: session,
