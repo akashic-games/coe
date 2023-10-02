@@ -105,9 +105,6 @@ describe("run-test", () => {
 		activeClient.sendMessage({ name: "broadcast", parameter: { data: "bar" } });
 		await context.advance(100);
 
-		// console.log(JSON.stringify(activeClient.game.vars.snapshots, null, 2));
-		// console.log(JSON.stringify(passiveClient.game.vars.snapshots, null, 2));
-
 		expect(activeClient.game.vars.snapshots).toEqual([
 			{
 				name: "initialize",
