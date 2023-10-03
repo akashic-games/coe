@@ -43,7 +43,7 @@
 <ul class="tsd-hierarchy">
 <li><a href="../interfaces/View.html" class="tsd-signature-type tsd-kind-interface">View</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Command</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type tsd-kind-type-parameter">ActionData</span><span class="tsd-signature-symbol">&gt;</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L18">src/impl/Scene.ts:18</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L18">src/impl/Scene.ts:18</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -65,8 +65,8 @@
 <a href="Scene.html#_ready" class="tsd-index-link deprecated tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_ready</span></a>
 <a href="Scene.html#_sceneAssetHolder" class="tsd-index-link tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_scene<wbr/>Asset<wbr/>Holder</span></a>
 <a href="Scene.html#_sentInitialEvents" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_sent<wbr/>Initial<wbr/>Events</span></a>
-<a href="Scene.html#_storageLoader" class="tsd-index-link tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_storage<wbr/>Loader</span></a>
 <a href="Scene.html#_timer" class="tsd-index-link tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_timer</span></a>
+<a href="Scene.html#_waitingPrepare" class="tsd-index-link tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_waiting<wbr/>Prepare</span></a>
 <a href="Scene.html#asset" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>asset</span></a>
 <a href="Scene.html#assetLoadCompleted" class="tsd-index-link deprecated tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>asset<wbr/>Load<wbr/>Completed</span></a>
 <a href="Scene.html#assetLoadFailed" class="tsd-index-link deprecated tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>asset<wbr/>Load<wbr/>Failed</span></a>
@@ -96,10 +96,11 @@
 <a href="Scene.html#pointDownCapture" class="tsd-index-link deprecated tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>point<wbr/>Down<wbr/>Capture</span></a>
 <a href="Scene.html#pointMoveCapture" class="tsd-index-link deprecated tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>point<wbr/>Move<wbr/>Capture</span></a>
 <a href="Scene.html#pointUpCapture" class="tsd-index-link deprecated tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>point<wbr/>Up<wbr/>Capture</span></a>
+<a href="Scene.html#seethrough" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>seethrough</span></a>
 <a href="Scene.html#state" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>state</span></a>
-<a href="Scene.html#storageValues" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>storage<wbr/>Values</span></a>
 <a href="Scene.html#tickGenerationMode" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>tick<wbr/>Generation<wbr/>Mode</span></a>
 <a href="Scene.html#update" class="tsd-index-link deprecated tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>update</span></a>
+<a href="Scene.html#vars" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>vars</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Methods</h3>
@@ -113,8 +114,6 @@
 <a href="Scene.html#_load" class="tsd-index-link tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_load</span></a>
 <a href="Scene.html#_needsLoading" class="tsd-index-link tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_needs<wbr/>Loading</span></a>
 <a href="Scene.html#_notifySceneReady" class="tsd-index-link tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_notify<wbr/>Scene<wbr/>Ready</span></a>
-<a href="Scene.html#_onStorageLoadError" class="tsd-index-link tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_on<wbr/>Storage<wbr/>Load<wbr/>Error</span></a>
-<a href="Scene.html#_onStorageLoaded" class="tsd-index-link tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_on<wbr/>Storage<wbr/>Loaded</span></a>
 <a href="Scene.html#append" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>append</span></a>
 <a href="Scene.html#clearInterval" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>clear<wbr/>Interval</span></a>
 <a href="Scene.html#clearTimeout" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>clear<wbr/>Timeout</span></a>
@@ -138,7 +137,6 @@
 <a href="Scene.html#remove" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>remove</span></a>
 <a href="Scene.html#requestAssets" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>request<wbr/>Assets</span></a>
 <a href="Scene.html#send" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>send</span></a>
-<a href="Scene.html#serializeStorageValues" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>serialize<wbr/>Storage<wbr/>Values</span></a>
 <a href="Scene.html#setInterval" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Interval</span></a>
 <a href="Scene.html#setTimeout" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Timeout</span></a>
 <a href="Scene.html#unregister" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>unregister</span></a>
@@ -165,7 +163,7 @@
 <h4 class="tsd-returns-title">Returns <a href="Scene.html" class="tsd-signature-type tsd-kind-class">Scene</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Command</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type tsd-kind-type-parameter">ActionData</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <p>Overrides g.Scene.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L33">src/impl/Scene.ts:33</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L33">src/impl/Scene.ts:33</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_assetHolders" class="tsd-anchor"></a>
@@ -176,7 +174,7 @@
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._assetHolders</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:378</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:376</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-protected"><a id="_controller" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_controller</span><a href="#_controller" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_controller</span><span class="tsd-signature-symbol">:</span> <a href="BaseController.html" class="tsd-signature-type tsd-kind-class">BaseController</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Command</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type tsd-kind-type-parameter">ActionData</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -186,12 +184,12 @@
 </div>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L30">src/impl/Scene.ts:30</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L30">src/impl/Scene.ts:30</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_generatesTickManually" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_generates<wbr/>Tick<wbr/>Manually</span><a href="#_generatesTickManually" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_generates<wbr/>Tick<wbr/>Manually</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L21">src/impl/Scene.ts:21</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L21">src/impl/Scene.ts:21</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_loaded" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_loaded</span><a href="#_loaded" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_loaded</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -213,7 +211,7 @@
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._loaded</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:351</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:349</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_loadingState" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_loading<wbr/>State</span><a href="#_loadingState" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_loading<wbr/>State</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">SceneLoadStateString</span></div>
@@ -223,7 +221,7 @@
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._loadingState</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:363</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:361</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_onReady" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_on<wbr/>Ready</span><a href="#_onReady" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_on<wbr/>Ready</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Scene</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -232,7 +230,7 @@
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._onReady</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:327</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:325</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_prefetchRequested" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_prefetch<wbr/>Requested</span><a href="#_prefetchRequested" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_prefetch<wbr/>Requested</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -242,7 +240,7 @@
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._prefetchRequested</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:357</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:355</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_ready" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span class="deprecated">_ready</span><a href="#_ready" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_ready</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Scene</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -253,7 +251,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from g.Scene._ready</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:333</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:331</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_sceneAssetHolder" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_scene<wbr/>Asset<wbr/>Holder</span><a href="#_sceneAssetHolder" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_scene<wbr/>Asset<wbr/>Holder</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">AssetHolder</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">SceneRequestAssetHandler</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -262,19 +260,12 @@
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._sceneAssetHolder</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:373</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:371</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_sentInitialEvents" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_sent<wbr/>Initial<wbr/>Events</span><a href="#_sentInitialEvents" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_sent<wbr/>Initial<wbr/>Events</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L22">src/impl/Scene.ts:22</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_storageLoader" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_storage<wbr/>Loader</span><a href="#_storageLoader" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">_storage<wbr/>Loader</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">StorageLoader</span></div>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
-<p>Inherited from g.Scene._storageLoader</p>
-<ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:322</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L22">src/impl/Scene.ts:22</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_timer" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_timer</span><a href="#_timer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_timer</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">TimerManager</span></div>
@@ -283,7 +274,33 @@
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._timer</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:368</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:366</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_waitingPrepare" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_waiting<wbr/>Prepare</span><a href="#_waitingPrepare" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">_waiting<wbr/>Prepare</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">done</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-type-declaration">
+<h4>Type declaration</h4>
+<ul class="tsd-parameters">
+<li class="tsd-parameter-signature">
+<ul class="tsd-signatures tsd-is-external">
+<li class="tsd-signature"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">done</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+<li class="tsd-description">
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">done</span>: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+<ul class="tsd-parameters">
+<li class="tsd-parameter-signature">
+<ul class="tsd-signatures tsd-is-external">
+<li class="tsd-signature"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+<li class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></div>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<p>Inherited from g.Scene._waitingPrepare</p>
+<ul>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:380</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="asset" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>asset</span><a href="#asset" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">asset</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">AssetAccessor</span></div>
@@ -296,7 +313,7 @@
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.asset</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:136</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:130</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="assetLoadCompleted" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span class="deprecated">asset<wbr/>Load<wbr/>Completed</span><a href="#assetLoadCompleted" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">asset<wbr/>Load<wbr/>Completed</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Asset</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -309,7 +326,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from g.Scene.assetLoadCompleted</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:284</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:280</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="assetLoadFailed" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span class="deprecated">asset<wbr/>Load<wbr/>Failed</span><a href="#assetLoadFailed" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">asset<wbr/>Load<wbr/>Failed</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">AssetLoadFailureInfo</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -323,7 +340,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from g.Scene.assetLoadFailed</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:276</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:272</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="assetLoaded" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span class="deprecated">asset<wbr/>Loaded</span><a href="#assetLoaded" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">asset<wbr/>Loaded</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Asset</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -336,7 +353,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from g.Scene.assetLoaded</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:267</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:263</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="assets" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>assets</span><a href="#assets" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">assets</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span>[<span class="tsd-kind-index-signature">key</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Asset</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
@@ -352,7 +369,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.assets</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:125</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:119</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="children" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>children</span><a href="#children" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">children</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">E</span><span class="tsd-signature-symbol">[]</span></div>
@@ -362,7 +379,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.children</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:118</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:112</li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="commandReceived" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span class="deprecated">command<wbr/>Received</span><a href="#commandReceived" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">command<wbr/>Received</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Command</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
@@ -371,7 +388,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 </div><aside class="tsd-sources">
 <p>Implementation of <a href="../interfaces/View.html">View</a>.<a href="../interfaces/View.html#commandReceived">commandReceived</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L20">src/impl/Scene.ts:20</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L20">src/impl/Scene.ts:20</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="game" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>game</span><a href="#game" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">game</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Game</span></div>
@@ -380,12 +397,12 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.game</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:140</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:134</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="handleEventFilter_bound" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>handle<wbr/>Event<wbr/>Filter_<wbr/>bound</span><a href="#handleEventFilter_bound" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">handle<wbr/>Event<wbr/>Filter_<wbr/>bound</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">EventFilter</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L31">src/impl/Scene.ts:31</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L31">src/impl/Scene.ts:31</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="loaded" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span class="deprecated">loaded</span><a href="#loaded" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">loaded</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Scene</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -398,7 +415,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 </div><aside class="tsd-sources">
 <p>Inherited from g.Scene.loaded</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:259</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:255</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="local" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>local</span><a href="#local" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">local</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">LocalTickModeString</span></div>
@@ -420,7 +437,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.local</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:158</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:152</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="message" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span class="deprecated">message</span><a href="#message" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">message</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">MessageEvent</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -431,7 +448,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 </div><aside class="tsd-sources">
 <p>Inherited from g.Scene.message</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:289</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:285</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="name" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>name</span><a href="#name" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">name</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
@@ -440,7 +457,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.name</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:171</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:165</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="onAssetLoad" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on<wbr/>Asset<wbr/>Load</span><a href="#onAssetLoad" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">on<wbr/>Asset<wbr/>Load</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Asset</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -483,7 +500,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Implementation of <a href="../interfaces/View.html">View</a>.<a href="../interfaces/View.html#onCommandReceive">onCommandReceive</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L19">src/impl/Scene.ts:19</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L19">src/impl/Scene.ts:19</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="onLoad" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on<wbr/>Load</span><a href="#onLoad" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">on<wbr/>Load</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Scene</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -575,7 +592,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 </div><aside class="tsd-sources">
 <p>Inherited from g.Scene.operation</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:318</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:314</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="pointDownCapture" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span class="deprecated">point<wbr/>Down<wbr/>Capture</span><a href="#pointDownCapture" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">point<wbr/>Down<wbr/>Capture</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">PointDownEvent</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -588,7 +605,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 </div><aside class="tsd-sources">
 <p>Inherited from g.Scene.pointDownCapture</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:297</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:293</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="pointMoveCapture" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span class="deprecated">point<wbr/>Move<wbr/>Capture</span><a href="#pointMoveCapture" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">point<wbr/>Move<wbr/>Capture</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">PointMoveEvent</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -601,7 +618,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 </div><aside class="tsd-sources">
 <p>Inherited from g.Scene.pointMoveCapture</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:305</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:301</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="pointUpCapture" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span class="deprecated">point<wbr/>Up<wbr/>Capture</span><a href="#pointUpCapture" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">point<wbr/>Up<wbr/>Capture</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">PointUpEvent</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -614,7 +631,18 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 </div><aside class="tsd-sources">
 <p>Inherited from g.Scene.pointUpCapture</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:313</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:309</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="seethrough" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>seethrough</span><a href="#seethrough" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">seethrough</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+<div class="tsd-comment tsd-typography"><p>シーンスタック上のこのシーンが描画される時、それに先んじてこのシーンの直下のシーンを描画するかどうか。
+このシーン自体は <code>seethrough</code> の値に関わらず常に描画されることに注意。
+ただし <code>seethrough</code> が true の時でもこのシーン以外の onUpdate は実行されない。そのため下のシーンの描画内容も更新されない。この挙動は実験的なものであり、将来的に変更されうる。</p>
+</div>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<p>Inherited from g.Scene.seethrough</p>
+<ul>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:171</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="state" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>state</span><a href="#state" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">state</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">SceneStateString</span></div>
@@ -624,15 +652,6 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <p>Inherited from g.Scene.state</p>
 <ul>
 <li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:208</li></ul></aside></section>
-<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="storageValues" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>storage<wbr/>Values</span><a href="#storageValues" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">storage<wbr/>Values</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">StorageValueStore</span></div>
-<div class="tsd-comment tsd-typography"><p>シーン内で利用可能なストレージの値を保持する <code>StorageValueStore</code>。</p>
-</div>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
-<p>Inherited from g.Scene.storageValues</p>
-<ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:246</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="tickGenerationMode" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>tick<wbr/>Generation<wbr/>Mode</span><a href="#tickGenerationMode" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">tick<wbr/>Generation<wbr/>Mode</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">TickGenerationModeString</span></div>
@@ -645,7 +664,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.tickGenerationMode</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:167</li></ul></aside></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:161</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="update" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span class="deprecated">update</span><a href="#update" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">update</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Trigger</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -656,7 +675,17 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 </div><aside class="tsd-sources">
 <p>Inherited from g.Scene.update</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:251</li></ul></aside></section></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:247</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="vars" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>vars</span><a href="#vars" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">vars</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+<div class="tsd-comment tsd-typography"><p>ゲーム開発者向けのコンテナ。</p>
+<p>この値はゲームエンジンのロジックからは使用されず、ゲーム開発者は任意の目的に使用してよい。</p>
+</div>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<p>Inherited from g.Scene.vars</p>
+<ul>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:320</li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_activate" class="tsd-anchor"></a>
@@ -668,7 +697,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._activate</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:548</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:543</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_deactivate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_deactivate</span><a href="#_deactivate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private tsd-is-inherited tsd-is-external">
@@ -678,7 +707,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._deactivate</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:552</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:547</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_fireLoaded" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_fire<wbr/>Loaded</span><a href="#_fireLoaded" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private tsd-is-inherited tsd-is-external">
@@ -688,7 +717,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._fireLoaded</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:592</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:579</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_fireReady" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_fire<wbr/>Ready</span><a href="#_fireReady" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private tsd-is-inherited tsd-is-external">
@@ -698,7 +727,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._fireReady</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:588</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:575</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_handleSceneAssetLoad" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_handle<wbr/>Scene<wbr/>Asset<wbr/>Load</span><a href="#_handleSceneAssetLoad" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private tsd-is-inherited tsd-is-external">
@@ -713,7 +742,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._handleSceneAssetLoad</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:564</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:559</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_handleSceneAssetLoadFailure" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_handle<wbr/>Scene<wbr/>Asset<wbr/>Load<wbr/>Failure</span><a href="#_handleSceneAssetLoadFailure" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private tsd-is-inherited tsd-is-external">
@@ -728,7 +757,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._handleSceneAssetLoadFailure</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:568</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:563</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_handleSceneAssetLoadFinish" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_handle<wbr/>Scene<wbr/>Asset<wbr/>Load<wbr/>Finish</span><a href="#_handleSceneAssetLoadFinish" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private tsd-is-inherited tsd-is-external">
@@ -745,7 +774,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._handleSceneAssetLoadFinish</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:572</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:567</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_load" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_load</span><a href="#_load" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private tsd-is-inherited tsd-is-external">
@@ -755,7 +784,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._load</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:560</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:555</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_needsLoading" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_needs<wbr/>Loading</span><a href="#_needsLoading" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private tsd-is-inherited tsd-is-external">
@@ -765,7 +794,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._needsLoading</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:556</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:551</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_notifySceneReady" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_notify<wbr/>Scene<wbr/>Ready</span><a href="#_notifySceneReady" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private tsd-is-inherited tsd-is-external">
@@ -775,32 +804,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene._notifySceneReady</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:584</li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_onStorageLoadError" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_on<wbr/>Storage<wbr/>Load<wbr/>Error</span><a href="#_onStorageLoadError" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures tsd-is-private tsd-is-inherited tsd-is-external">
-<li class="tsd-signature tsd-anchor-link" id="_onStorageLoadError._onStorageLoadError-1"><span class="tsd-kind-call-signature">_on<wbr/>Storage<wbr/>Load<wbr/>Error</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">_error</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#_onStorageLoadError._onStorageLoadError-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description"><code class="tsd-tag ts-flagPrivate">Private</code> 
-<div class="tsd-parameters">
-<h4 class="tsd-parameters-title">Parameters</h4>
-<ul class="tsd-parameter-list">
-<li>
-<h5><span class="tsd-kind-parameter">_error</span>: <span class="tsd-signature-type ">StorageLoadError</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
-<p>Inherited from g.Scene._onStorageLoadError</p>
-<ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:576</li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member tsd-is-private tsd-is-inherited tsd-is-external"><a id="_onStorageLoaded" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_on<wbr/>Storage<wbr/>Loaded</span><a href="#_onStorageLoaded" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures tsd-is-private tsd-is-inherited tsd-is-external">
-<li class="tsd-signature tsd-anchor-link" id="_onStorageLoaded._onStorageLoaded-1"><span class="tsd-kind-call-signature">_on<wbr/>Storage<wbr/>Loaded</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#_onStorageLoaded._onStorageLoaded-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description"><code class="tsd-tag ts-flagPrivate">Private</code> 
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
-<p>Inherited from g.Scene._onStorageLoaded</p>
-<ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:580</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:571</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="append" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>append</span><a href="#append" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -821,7 +825,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.append</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:503</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:507</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clearInterval" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clear<wbr/>Interval</span><a href="#clearInterval" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -841,7 +845,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.clearInterval</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:438</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:442</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clearTimeout" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clear<wbr/>Timeout</span><a href="#clearTimeout" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -861,7 +865,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.clearTimeout</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:459</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:463</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="createTimer" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>create<wbr/>Timer</span><a href="#createTimer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -884,13 +888,15 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.createTimer</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:416</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:418</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="deleteTimer" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>delete<wbr/>Timer</span><a href="#deleteTimer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="deleteTimer.deleteTimer-1"><span class="tsd-kind-call-signature">delete<wbr/>Timer</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">timer</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#deleteTimer.deleteTimer-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Timerを削除する。</p>
+<div class="tsd-comment tsd-typography"><p>Timerを削除する。
+<code>Scene#createTimer()</code>と同様に、通常はゲーム開発者がこのメソッドを呼び出す必要はない。
+このメソッドを利用する場合、メソッド実行前に対象のTimerのonElapseに登録したハンドラを全て削除しておく必要がある。</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -904,7 +910,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.deleteTimer</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:421</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:425</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="destroy" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>destroy</span><a href="#destroy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -913,7 +919,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Overrides g.Scene.destroy</p>
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L63">src/impl/Scene.ts:63</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L63">src/impl/Scene.ts:63</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="destroyed" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>destroyed</span><a href="#destroyed" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -925,7 +931,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.destroyed</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:407</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:409</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="end" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>end</span><a href="#end" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -940,7 +946,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.end</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:481</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:485</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="findPointSourceByPoint" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>find<wbr/>Point<wbr/>Source<wbr/>By<wbr/>Point</span><a href="#findPointSourceByPoint" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -970,7 +976,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.findPointSourceByPoint</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:526</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:530</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="fireControllerUpdate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>fire<wbr/>Controller<wbr/>Update</span><a href="#fireControllerUpdate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
@@ -978,7 +984,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L75">src/impl/Scene.ts:75</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L75">src/impl/Scene.ts:75</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="gotoScene" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>goto<wbr/>Scene</span><a href="#gotoScene" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1006,7 +1012,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.gotoScene</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:473</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:477</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="handleEventFilter" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>handle<wbr/>Event<wbr/>Filter</span><a href="#handleEventFilter" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
@@ -1021,7 +1027,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <h5><span class="tsd-kind-parameter">__namedParameters</span>: <span class="tsd-signature-type ">EventFilterController</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L79">src/impl/Scene.ts:79</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L79">src/impl/Scene.ts:79</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="handleMessageEventReceive" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>handle<wbr/>Message<wbr/>Event<wbr/>Receive</span><a href="#handleMessageEventReceive" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
@@ -1034,7 +1040,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">message</span>: <span class="tsd-signature-type ">MessageEvent</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L129">src/impl/Scene.ts:129</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L129">src/impl/Scene.ts:129</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="handleStateChange" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>handle<wbr/>State<wbr/>Change</span><a href="#handleStateChange" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
@@ -1047,7 +1053,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">state</span>: <span class="tsd-signature-type ">SceneStateString</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L134">src/impl/Scene.ts:134</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L134">src/impl/Scene.ts:134</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="insertBefore" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>insert<wbr/>Before</span><a href="#insertBefore" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1074,7 +1080,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.insertBefore</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:513</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:517</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="isCurrentScene" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>is<wbr/>Current<wbr/>Scene</span><a href="#isCurrentScene" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1086,7 +1092,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.isCurrentScene</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:463</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:467</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="modified" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>modified</span><a href="#modified" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1105,7 +1111,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.modified</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:391</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:393</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="prefetch" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>prefetch</span><a href="#prefetch" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1115,14 +1121,12 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <p><code>Scene</code> に必要なアセットは、通常、<code>Game#pushScene()</code> などによるシーン遷移にともなって暗黙に読み込みが開始される。
 ゲーム開発者はこのメソッドを呼び出すことで、シーン遷移前にアセット読み込みを開始する(先読みする)ことができる。
 先読み開始後、シーン遷移時までに読み込みが完了していない場合、通常の読み込み処理同様にローディングシーンが表示される。</p>
-<p>このメソッドは <code>StorageLoader</code> についての先読み処理を行わない点に注意。
-ストレージの場合、書き込みが行われる可能性があるため、順序を無視して先読みすることはできない。</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.prefetch</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:537</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:538</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="raiseTickIfMessageEventExists" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>raise<wbr/>Tick<wbr/>If<wbr/>Message<wbr/>Event<wbr/>Exists</span><a href="#raiseTickIfMessageEventExists" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
@@ -1130,7 +1134,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L121">src/impl/Scene.ts:121</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L121">src/impl/Scene.ts:121</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="register" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>register</span><a href="#register" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1151,7 +1155,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.register</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:488</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:492</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="remove" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>remove</span><a href="#remove" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1172,7 +1176,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.remove</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:519</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:523</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="requestAssets" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>request<wbr/>Assets</span><a href="#requestAssets" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1182,13 +1186,13 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">assetIds</span>: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">DynamicAssetConfiguration</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5></li>
+<h5><span class="tsd-kind-parameter">assetIds</span>: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">VectorImageAssetGenerationConfiguration</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">DynamicAssetConfiguration</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5></li>
 <li>
 <h5><span class="tsd-kind-parameter">handler</span>: <span class="tsd-signature-type ">SceneRequestAssetHandler</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from g.Scene.requestAssets</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:544</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:539</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="send" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>send</span><a href="#send" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1210,20 +1214,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Implementation of <a href="../interfaces/View.html">View</a>.<a href="../interfaces/View.html#send">send</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/akashic-games/coe/blob/1aa37bd/src/impl/Scene.ts#L58">src/impl/Scene.ts:58</a></li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="serializeStorageValues" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>serialize<wbr/>Storage<wbr/>Values</span><a href="#serializeStorageValues" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures tsd-is-inherited tsd-is-external">
-<li class="tsd-signature tsd-anchor-link" id="serializeStorageValues.serializeStorageValues-1"><span class="tsd-kind-call-signature">serialize<wbr/>Storage<wbr/>Values</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#serializeStorageValues.serializeStorageValues-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>シーンが読み込んだストレージの値をシリアライズする。</p>
-<p><code>Scene#storageValues</code> の内容をシリアライズする。</p>
-</div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
-<p>Inherited from g.Scene.serializeStorageValues</p>
-<ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:543</li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/akashic-games/coe/blob/6d68289/src/impl/Scene.ts#L58">src/impl/Scene.ts:58</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="setInterval" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Interval</span><a href="#setInterval" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1263,7 +1254,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.setInterval</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:433</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:437</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="setTimeout" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Timeout</span><a href="#setTimeout" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1305,7 +1296,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.setTimeout</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:454</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:458</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="unregister" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>unregister</span><a href="#unregister" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1326,7 +1317,7 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from g.Scene.unregister</p>
 <ul>
-<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:495</li></ul></aside></li></ul></section></section></div>
+<li>Defined in node_modules/@akashic/akashic-engine/lib/Scene.d.ts:499</li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -1357,8 +1348,8 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <li><a href="#_ready" class="tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_ready</span></a></li>
 <li><a href="#_sceneAssetHolder" class="tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_scene<wbr/>Asset<wbr/>Holder</span></a></li>
 <li><a href="#_sentInitialEvents" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_sent<wbr/>Initial<wbr/>Events</span></a></li>
-<li><a href="#_storageLoader" class="tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_storage<wbr/>Loader</span></a></li>
 <li><a href="#_timer" class="tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_timer</span></a></li>
+<li><a href="#_waitingPrepare" class="tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_waiting<wbr/>Prepare</span></a></li>
 <li><a href="#asset" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>asset</span></a></li>
 <li><a href="#assetLoadCompleted" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>asset<wbr/>Load<wbr/>Completed</span></a></li>
 <li><a href="#assetLoadFailed" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>asset<wbr/>Load<wbr/>Failed</span></a></li>
@@ -1388,10 +1379,11 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <li><a href="#pointDownCapture" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>point<wbr/>Down<wbr/>Capture</span></a></li>
 <li><a href="#pointMoveCapture" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>point<wbr/>Move<wbr/>Capture</span></a></li>
 <li><a href="#pointUpCapture" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>point<wbr/>Up<wbr/>Capture</span></a></li>
+<li><a href="#seethrough" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>seethrough</span></a></li>
 <li><a href="#state" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>state</span></a></li>
-<li><a href="#storageValues" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>storage<wbr/>Values</span></a></li>
 <li><a href="#tickGenerationMode" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>tick<wbr/>Generation<wbr/>Mode</span></a></li>
 <li><a href="#update" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>update</span></a></li>
+<li><a href="#vars" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>vars</span></a></li>
 <li><a href="#_activate" class="tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_activate</span></a></li>
 <li><a href="#_deactivate" class="tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_deactivate</span></a></li>
 <li><a href="#_fireLoaded" class="tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_fire<wbr/>Loaded</span></a></li>
@@ -1402,8 +1394,6 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <li><a href="#_load" class="tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_load</span></a></li>
 <li><a href="#_needsLoading" class="tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_needs<wbr/>Loading</span></a></li>
 <li><a href="#_notifySceneReady" class="tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_notify<wbr/>Scene<wbr/>Ready</span></a></li>
-<li><a href="#_onStorageLoadError" class="tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_on<wbr/>Storage<wbr/>Load<wbr/>Error</span></a></li>
-<li><a href="#_onStorageLoaded" class="tsd-is-private tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_on<wbr/>Storage<wbr/>Loaded</span></a></li>
 <li><a href="#append" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>append</span></a></li>
 <li><a href="#clearInterval" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>clear<wbr/>Interval</span></a></li>
 <li><a href="#clearTimeout" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>clear<wbr/>Timeout</span></a></li>
@@ -1427,7 +1417,6 @@ keyはこのシーンの生成時、コンストラクタの第二引数 <code>a
 <li><a href="#remove" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>remove</span></a></li>
 <li><a href="#requestAssets" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>request<wbr/>Assets</span></a></li>
 <li><a href="#send" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>send</span></a></li>
-<li><a href="#serializeStorageValues" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>serialize<wbr/>Storage<wbr/>Values</span></a></li>
 <li><a href="#setInterval" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Interval</span></a></li>
 <li><a href="#setTimeout" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Timeout</span></a></li>
 <li><a href="#unregister" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>unregister</span></a></li></ul></div></details></div>
