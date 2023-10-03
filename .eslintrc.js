@@ -7,5 +7,8 @@ module.exports = {
     project: "tsconfig.jest.json",
     sourceType: "module"
   },
-  ignorePatterns: ["*.js"]
+  ignorePatterns: [
+    "*.js",
+    "tests/**/*"
+  ]
 }
