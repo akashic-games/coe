@@ -5,7 +5,7 @@
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
   "scripts": {
-    "prepare": "npm run build && npm run doc",
+    "prepare": "husky && npm run build && npm run doc",
     "build": "rimraf ./lib && tsc -p ./tsconfig.json && npm run format",
     "format": "prettier --write \"{src,tests}/**/*.ts\" --config ./prettier.config.js",
     "doc": "typedoc --out ./public/api src/index.ts",
@@ -38,22 +38,24 @@
     "@akashic/akashic-engine": "~3.15.0"
   },
   "devDependencies": {
-    "@akashic/akashic-cli-lib-manage": "^1.8.19",
-    "@akashic/eslint-config": "^1.1.1",
-    "@akashic/headless-akashic": "^4.4.0",
-    "@types/jest": "^29.5.4",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@akashic/akashic-cli-lib-manage": "^1.8.22",
+    "@akashic/eslint-config": "^2.0.0",
+    "@akashic/headless-akashic": "^4.5.0",
+    "@akashic/resurveil": "^1.0.0",
+    "@types/jest": "^29.5.12",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.49.0",
-    "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-jest": "^27.4.0",
-    "husky": "^8.0.3",
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^27.9.0",
+    "husky": "^9.0.11",
     "jest": "^29.7.0",
-    "prettier": "^3.0.3",
-    "rimraf": "^5.0.1",
-    "ts-jest": "^29.1.1",
-    "typedoc": "^0.25.1",
-    "typescript": "^5.2.2"
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.2",
+    "typedoc": "^0.25.9",
+    "typescript": "^5.3.3"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -73,9 +75,8 @@
       "<rootDir>/tests/**/*.spec.ts"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build && npm test"
-    }
+  "lint-staged": {
+    "*": "resurveil --ignore-no-config",
+    "src/**/*.ts": "prettier --list-different"
   }
 }
