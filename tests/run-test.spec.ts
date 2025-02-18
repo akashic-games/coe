@@ -63,7 +63,9 @@ describe("run-test", () => {
 			}
 		}
 		const { stdout } = await exec("npm pack --pack-destination ./tests/fixtures/coe-test", { cwd: join(__dirname, "..") });
-		const tarName = stdout.trim();
+		const found = stdout.match(/akashic-extension-coe-\d{1,2}.\d{1,2}.\d{1,2}.tgz/);
+		if (!found) throw new Error("akashic-extension-coe-x.x.x.tgz was not found from stdout.");
+		const tarName = found[0];
 		await exec(`akashic-cli-install ${tarName}`, { cwd: join(__dirname, "fixtures", "coe-test") });
 	}, 50 * 1000);
 
