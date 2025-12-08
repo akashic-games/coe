@@ -3,9 +3,19 @@
     "target": "ES5",
     "lib": ["es5"],
     "types": ["node", "jest"],
+    "outDir": "./lib",
     "noImplicitAny": true,
     "module": "commonjs" ,
     "noUnusedLocals": true,
     "declaration": true
-  }
+  },
+  "files": [
+    "./node_modules/@akashic/akashic-engine/lib/main.d.ts"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/**/__tests__/**/*.ts"
+  ]
 }
