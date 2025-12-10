@@ -3,6 +3,7 @@ import { exit, exitSession, startSession } from "../global";
 import { SceneWatcher } from "../SceneWatcher";
 
 /**
+ * @deprecated 後方互換
  * COEPlugin#COEExitSessionParameters を拡張したインタフェース。
  */
 interface COEExtendChildSessionEndMessage extends COEChildSessionEndMessage {
@@ -22,27 +23,31 @@ export class COEMessageEventHandler extends SceneWatcher {
 		scene.message.add(this.handleMessageEvent, this);
 	}
 
-	protected handleMessageEvent(event: g.MessageEvent): void {
+	protected handleMessageEvent(event?: g.MessageEvent): void {
+		if (!event) return;
 		const message = event.data as COEMessage;
 		if (message.type === "child_start") {
 			startSession({
-				sessionId: message.sessionId,
-				delayRange: message.delayRange,
-				application: message.application,
-				cascadeApplications: message.cascadeApplications,
-				local: message.local,
-				localEvents: message.localEvents,
-				eventSendablePlayers: message.eventSendablePlayers,
-				additionalData: message.additionalData,
-				size: message.size,
-				playlog: message.playlog
+				sessionId: message.parameters.sessionId,
+				delayRange: message.parameters.delayRange,
+				application: message.parameters.application,
+				cascadeApplications: message.parameters.cascadeApplications,
+				local: message.parameters.local,
+				localEvents: message.parameters.localEvents,
+				eventSendablePlayers: message.parameters.eventSendablePlayers,
+				additionalData: message.parameters.additionalData,
+				size: message.parameters.size,
+				playlog: message.parameters.playlog
 			});
 		} else if (message.type === "child_end") {
-			exitSession(message.sessionId, {
+			// NOTE: 後方互換のための処理。
+			const coeParams = {
 				needsResult: !!message.needsResult,
 				needsPlaylog: !!message.needsPlaylog
-			});
+			};
+			exitSession(message.parameters.sessionId, coeParams);
 		} else if (message.type === "end") {
+			// NOTE: 後方互換のための処理。
 			exit(message.result);
 		}
 	}
