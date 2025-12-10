@@ -22,9 +22,7 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 	 * 通常、ゲーム開発者は本値を参照・また書き換えてはならない。
 	 */
 	lockingProcessingMessageEvent: boolean = false;
-	/**
-	 * 本 controller によるイベントの消化を一時的にロックするかどうか。
-	 */
+
 	onLoad: g.Trigger<void> = new g.Trigger();
 	onUpdate: g.Trigger<void> = new g.Trigger();
 	onActionReceive: g.Trigger<Action<ActionData>> = new g.Trigger();

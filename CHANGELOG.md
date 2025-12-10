@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2.4.0
+* `@akashic-extension/coe-messages@4.0.0` に追従
+
 ## 2.3.0
 * `@akashic-environment/coe-plugin@4.3.0` に更新
 * `@akashic-extension/coe-messages@3.3.1` に更新
