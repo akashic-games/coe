@@ -16,10 +16,6 @@ export interface Controller<Command, ActionData> {
 	 * この Controller に対して action が送信された際に発火する trigger 。
 	 */
 	onActionReceive: g.Trigger<Action<ActionData>>;
-	/**
-	 * @deprecated 非推奨である。将来的に削除される。代わりに `onActionReceive` を利用すること。
-	 */
-	actionReceived: g.Trigger<Action<ActionData>>;
 
 	/**
 	 * View に対してデータをブロードキャストする。

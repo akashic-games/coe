@@ -1,7 +1,7 @@
 import type { COEExitSessionParameters, COEPlugin, COEStartSessionParameters } from "@akashic-environment/coe-plugin";
 import type { COEExternalMessage, SessionId } from "@akashic-extension/coe-messages";
 import { COEMessageEventHandler } from "./impl/COEMessageEventHandler";
-import type { Action, InitializeArguments, InitializeParameters, Permission, StartLocalSessionParameters } from "./parameters";
+import type { Action, InitializeArguments, InitializeParameters, StartLocalSessionParameters } from "./parameters";
 
 declare let window: any;
 
@@ -14,18 +14,6 @@ export function isSandbox(): boolean {
 
 let roles: string[] = [];
 let debugMode: boolean = false;
-const permission: Permission = {
-	advance: false,
-	aggregation: false,
-	advanceRequest: false
-};
-
-/**
- * 共体験セッションを実行している端末の権限を取得する。
- */
-export function getPermission(): Permission {
-	return permission;
-}
 
 /**
  * 自身のセッションIDを取得する。
@@ -44,11 +32,6 @@ export function initialize(params: InitializeParameters): void {
 	const args: InitializeArguments | undefined = params.args && params.args.args ? params.args.args : undefined;
 	const game = params.game;
 	if (args && args.coe) {
-		if (args.coe.permission) {
-			permission.advance = !!args.coe.permission.advance;
-			permission.advanceRequest = !!args.coe.permission.advanceRequest;
-			permission.aggregation = !!args.coe.permission.aggregation;
-		}
 		if (args.coe.roles != null) {
 			roles = args.coe.roles;
 		}
@@ -57,14 +40,7 @@ export function initialize(params: InitializeParameters): void {
 		}
 	} else {
 		if (game.isActiveInstance()) {
-			permission.advance = true;
-			permission.aggregation = true;
-			permission.advanceRequest = true;
 			roles = ["broadcaster"];
-		} else {
-			permission.advance = game.selfId == null;
-			permission.aggregation = game.selfId == null;
-			permission.advanceRequest = game.selfId == null;
 		}
 	}
 
