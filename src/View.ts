@@ -8,6 +8,11 @@ export interface View<Command, ActionData> {
 	onCommandReceive: g.Trigger<Command>;
 
 	/**
+	 * @deprecated 非推奨である。将来的に削除される。代わりに `onCommandReceive` を利用すること。
+	 */
+	commandReceived: g.Trigger<Command>;
+
+	/**
 	 * Controller に対して action データを送信する。
 	 * @param data 送信する action データ
 	 */
