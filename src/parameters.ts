@@ -13,6 +13,7 @@ import type { SceneWatcher } from "./SceneWatcher";
  */
 export interface InitializeArguments {
 	coe: {
+		permission: Permission;
 		roles: string[];
 		debugMode?: boolean;
 	};
@@ -37,6 +38,25 @@ export interface InitializeParameters {
 	 * 省略時は `COEMessageEventHandler` が利用される。
 	 */
 	coeMessageEventHandler?: SceneWatcher;
+}
+
+/**
+ * インスタンスの権利を表すインターフェース。
+ * @deprecated このインタフェースは後方互換性のために存在している。
+ */
+export interface Permission {
+	/**
+	 * 進行権
+	 */
+	advance: boolean;
+	/**
+	 * 集計権。通常は進行権を保有するインスタンスのみ保有する
+	 */
+	aggregation: boolean;
+	/**
+	 * 進行要求権。通常は起動者に対して付与される。
+	 */
+	advanceRequest: boolean;
 }
 
 export interface Action<ActionData> {

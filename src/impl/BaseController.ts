@@ -27,6 +27,19 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 	onUpdate: g.Trigger<void> = new g.Trigger();
 	onActionReceive: g.Trigger<Action<ActionData>> = new g.Trigger();
 
+	/**
+	 * @deprecated 非推奨である。将来的に削除される。代わりに `onLoad` を利用すること。
+	 */
+	loaded: g.Trigger<void> = this.onLoad;
+	/**
+	 * @deprecated 非推奨である。将来的に削除される。代わりに `onUpdate` を利用すること。
+	 */
+	update: g.Trigger<void> = this.onUpdate;
+	/**
+	 * @deprecated 非推奨である。将来的に削除される。代わりに `onActionReceive` を利用すること。
+	 */
+	actionReceived: g.Trigger<Action<ActionData>> = this.onActionReceive;
+
 	private timerManager: g.TimerManager;
 	private broadcastDataBuffer: BroadcastDataBuffer<any>[] = [];
 
@@ -72,6 +85,9 @@ export class BaseController<Command, ActionData> implements Controller<Command, 
 		this.onUpdate = null!;
 		this.onLoad = null!;
 		this.onActionReceive = null!;
+		this.update = null!;
+		this.loaded = null!;
+		this.actionReceived = null!;
 	}
 
 	getBroadcastDataBuffer(): BroadcastDataBuffer<any>[] | null {

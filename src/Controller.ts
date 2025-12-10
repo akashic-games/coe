@@ -18,6 +18,11 @@ export interface Controller<Command, ActionData> {
 	onActionReceive: g.Trigger<Action<ActionData>>;
 
 	/**
+	 * @deprecated 非推奨である。将来的に削除される。代わりに `onActionReceive` を利用すること。
+	 */
+	actionReceived: g.Trigger<Action<ActionData>>;
+
+	/**
 	 * View に対してデータをブロードキャストする。
 	 * @param data プロードキャストするデータ
 	 * @param priority プライオリティ

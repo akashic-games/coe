@@ -12,6 +12,11 @@ export class COEController<Command, ActionData> extends BaseController<Command, 
 	 */
 	onStartSessionRequest: g.Trigger<COESessionStartMessage<any>> = new g.Trigger();
 
+	/**
+	 * @deprecated 非推奨である。将来的に削除される。代わりに `onStartSessionRequest` を利用すること。
+	 */
+	startSessionRequested: g.Trigger<COESessionStartMessage<any>> = this.onStartSessionRequest;
+
 	constructor() {
 		super();
 		this.onActionReceive.add(this.handleCOEMessageEventReceive, this);
@@ -43,6 +48,7 @@ export class COEController<Command, ActionData> extends BaseController<Command, 
 		this.onActionReceive.remove(this.handleCOEMessageEventReceive, this);
 		this.onStartSessionRequest.destroy();
 		this.onStartSessionRequest = null!;
+		this.startSessionRequested = null!;
 		super.destroy();
 	}
 
