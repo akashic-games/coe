@@ -34,7 +34,7 @@
   ],
   "dependencies": {
     "@akashic-environment/coe-plugin": "~4.3.0",
-    "@akashic-extension/coe-messages": "~3.3.1",
+    "@akashic-extension/coe-messages": "~4.0.0",
     "@akashic/akashic-engine": "~3.15.0"
   },
   "devDependencies": {
