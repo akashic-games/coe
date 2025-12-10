@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@akashic-extension/coe": "file:akashic-extension-coe-2.3.0.tgz"
+    "@akashic-extension/coe": "file:akashic-extension-coe-2.4.0.tgz"
   }
 }
